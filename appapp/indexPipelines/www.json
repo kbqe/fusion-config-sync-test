@@ -29,5 +29,8 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:13:32.576Z"
+  }, {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T12:13:35.503Z"
   } ]
 }
