@@ -3,7 +3,20 @@
   "createdAt" : "2020-08-14T12:33:27.680Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
-  "features" : { },
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "wewe",
     "numShards" : 2,
