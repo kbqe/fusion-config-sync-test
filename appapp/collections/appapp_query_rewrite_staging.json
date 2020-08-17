@@ -3,6 +3,21 @@
   "createdAt" : "2020-08-14T11:20:34.117Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "appapp_query_rewrite_staging",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "appapp_query_rewrite_staging",
     "numShards" : 1,
