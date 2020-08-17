@@ -1,28 +1,34 @@
 {
-  "id" : "appapp_synonym_detection",
-  "docIdField" : "doc_id_s",
-  "trainingDataSamplingFraction" : 1.0,
-  "trainingDataFilterQuery" : "*:*",
-  "dataFormat" : "solr",
-  "analyzerConfigQuery" : "{ \"analyzers\": [ { \"name\": \"LetterTokLowerStem\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"letter\" },\"filters\": [{ \"type\": \"lowercase\" },{ \"type\": \"KStem\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"LetterTokLowerStem\" } ]}",
-  "keyPhraseFilterQuery" : "type:phrase",
-  "similarityThreshold" : 0.01,
-  "countField" : "aggr_count_i",
-  "enableAutoPublish" : false,
   "type" : "synonymDetection",
+  "id" : "appapp_synonym_detection",
+  "trainingDataFilterQuery" : "*:*",
+  "trainingCollection" : "appapp_signals_aggr",
+  "outputCollection" : "appapp_query_rewrite_staging",
+  "overwriteOutput" : true,
+  "misspellingCollection" : "appapp_query_rewrite_staging",
+  "misspellingsFilterQuery" : "type:spell",
+  "keyPhraseCollection" : "appapp_query_rewrite_staging",
+  "keyPhraseFilterQuery" : "type:phrase",
+  "countField" : "aggr_count_i",
+  "fieldToVectorize" : "query_s",
+  "docIdField" : "doc_id_s",
+  "overlapThreshold" : 0.5,
+  "minQueryCount" : 5,
+  "similarityThreshold" : 0.01,
+  "trainingDataSamplingFraction" : 1.0,
+  "analyzerConfigQuery" : "{ \"analyzers\": [ { \"name\": \"LetterTokLowerStem\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"letter\" },\"filters\": [{ \"type\": \"lowercase\" },{ \"type\": \"KStem\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"LetterTokLowerStem\" } ]}",
+  "randomSeed" : 1234,
+  "sparkPartitions" : 200,
+  "enableAutoPublish" : false,
+  "dataFormat" : "solr",
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T11:20:47.126Z"
-  } ],
-  "outputCollection" : "appapp_query_rewrite_staging",
-  "sparkPartitions" : 200,
-  "overlapThreshold" : 0.5,
-  "fieldToVectorize" : "query_s",
-  "randomSeed" : 1234,
-  "minQueryCount" : 5,
-  "trainingCollection" : "appapp_signals_aggr",
-  "keyPhraseCollection" : "appapp_query_rewrite_staging",
-  "misspellingsFilterQuery" : "type:spell",
-  "misspellingCollection" : "appapp_query_rewrite_staging",
-  "overwriteOutput" : true
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.262Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.270Z"
+  } ]
 }
