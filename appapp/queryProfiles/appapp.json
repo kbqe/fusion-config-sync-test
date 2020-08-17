@@ -1,6 +1,0 @@
-{
-  "id" : "appapp",
-  "queryPipeline" : "appapp",
-  "collection" : "appapp",
-  "searchHandler" : "/select"
-}
