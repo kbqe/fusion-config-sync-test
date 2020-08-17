@@ -1,0 +1,13 @@
+{
+  "id" : "appapp11111",
+  "createdAt" : "2020-09-14T11:20:34.113Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "appapp",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { }
+}
