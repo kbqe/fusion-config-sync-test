@@ -3,12 +3,26 @@
   "createdAt" : "2020-08-14T11:20:42.105Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
-  "features" : { },
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "appapp_signals",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "appapp_signals",
     "numShards" : 2,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 2,
+    "maxShardsPerNode" : 4,
     "configTemplate" : "solr/conf/insights.zip"
   },
   "type" : "SIGNALS",
@@ -17,5 +31,11 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T11:20:48.619Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:43.975Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:43.979Z"
   } ]
 }
