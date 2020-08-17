@@ -1,7 +1,6 @@
 {
   "id" : "eer",
   "enableMediaTypeDetection" : true,
-  "detectMediaTypeBasedOnExtension" : true,
   "maxParserDepth" : 16,
   "maxFieldLength" : -1,
   "parserStages" : [ {
@@ -143,8 +142,12 @@
     "ignoredMediaTypes" : [ ],
     "outputFieldPrefix" : ""
   } ],
+  "detectMediaTypeBasedOnExtension" : true,
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:33:17.823Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:14.661Z"
   } ]
 }
