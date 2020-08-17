@@ -47,7 +47,7 @@
       } ],
       "reservedFieldsMappingAllowed" : false,
       "skip" : false,
-      "id" : "Anda"
+      "id" : "FromMap"
     },
     "f.cookieSpec" : "browser-compatibility",
     "collection" : "appapp",
