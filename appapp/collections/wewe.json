@@ -3,6 +3,33 @@
   "createdAt" : "2020-08-14T12:33:27.680Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    },
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "wewe",
+      "params" : {
+        "idField" : "id",
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "content" : true
+      },
+      "enabled" : false
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "wewe",
     "numShards" : 2,
