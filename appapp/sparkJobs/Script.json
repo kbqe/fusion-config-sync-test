@@ -1,0 +1,9 @@
+{
+  "type" : "script",
+  "id" : "Script",
+  "script" : "object Hello {\n    def main(args: Array[String]) = {\n        println(\"Hello, world\")\n    }\n}",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-17T13:51:30.055Z"
+  } ]
+}
