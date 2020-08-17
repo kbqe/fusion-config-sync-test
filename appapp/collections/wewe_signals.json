@@ -3,6 +3,21 @@
   "createdAt" : "2020-08-17T09:55:58.221Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "wewe_signals",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "wewe_signals",
     "numShards" : 2,
