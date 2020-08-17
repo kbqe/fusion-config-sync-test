@@ -1,0 +1,33 @@
+{
+  "id" : "222",
+  "stages" : [ {
+    "id" : "218ad787-df3d-40f5-836c-28e2ff4ebea3",
+    "mappings" : [ ],
+    "reservedFieldsMappingAllowed" : false,
+    "type" : "field-mapping",
+    "skip" : false
+  }, {
+    "id" : "3638ba9e-a5dc-4e6c-b8a1-2ee8cb578f1f",
+    "duplicateSingleValuedFields" : false,
+    "fieldsToExclude" : [ ],
+    "advancedTextFieldsIndexing" : true,
+    "maxTextLengthForAdvancedIndexing" : 100,
+    "type" : "solr-dynamic-field-name-mapping",
+    "skip" : false
+  }, {
+    "id" : "cb460f3b-1316-4e0c-93f5-aad9a55a722e",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "properties" : { },
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T11:52:21.848Z"
+  } ]
+}

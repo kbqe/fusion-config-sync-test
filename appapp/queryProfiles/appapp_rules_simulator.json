@@ -1,0 +1,27 @@
+{
+  "id" : "appapp_rules_simulator",
+  "queryPipeline" : "appapp",
+  "searchHandler" : "/select",
+  "collection" : "appapp",
+  "params" : [ {
+    "key" : "lw.rules.simulate",
+    "value" : "appapp_query_rewrite_staging",
+    "policy" : "default"
+  }, {
+    "key" : "lw.rules.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.tagger.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.skip_response_signal",
+    "value" : "1",
+    "policy" : "default"
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T11:20:38.384Z"
+  } ]
+}

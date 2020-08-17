@@ -1,0 +1,44 @@
+{
+  "id" : "appapp-question-answering",
+  "stages" : [ {
+    "id" : "8e068165-5295-464d-9acd-5a5c77c897df",
+    "mappings" : [ ],
+    "reservedFieldsMappingAllowed" : false,
+    "type" : "field-mapping",
+    "skip" : false
+  }, {
+    "id" : "3de28fd3-deb6-45b0-be33-7e8d0b927705",
+    "duplicateSingleValuedFields" : false,
+    "fieldsToExclude" : [ ],
+    "advancedTextFieldsIndexing" : true,
+    "maxTextLengthForAdvancedIndexing" : 100,
+    "type" : "solr-dynamic-field-name-mapping",
+    "skip" : false
+  }, {
+    "id" : "796e67cc-88e5-47c2-83c7-176eb9f2f6c3",
+    "modelId" : "change-me",
+    "failOnError" : false,
+    "storeInContext" : false,
+    "inputScript" : "/* \nName of the document field to feed into the encoder. \n*/\nvar documentFeatureField = \"body_t\"\n\n/* \nModel input construction. \n*/\nvar modelInput = new java.util.HashMap()\nmodelInput.put(\"text\", doc.getFirstFieldValue(documentFeatureField))\nmodelInput.put(\"pipeline\", \"index\")\nmodelInput.put(\"compress\", \"true\")\nmodelInput.put(\"unidecode\", \"true\")\nmodelInput.put(\"lowercase\", \"false\")\n\nmodelInput",
+    "outputScript" : "/*\nName of the field to store the compressed encoded vector in the document.\n\nCompressed vector field will be added to the document only if `compress = \"true\"` was \npassed into the `modelInput`.\n*/\nvar compressedVectorField = \"compressed_document_vector_s\"\n\n/*\nName of the field to store the uncompressed encoded vector in the document.\n\nBy default uncompressed vector wouldn't be added to the document. \nChange `keepUncompressedVector` to true if you want to keep uncompressed vector.  \n*/\nvar keepUncompressedVector = false\nvar vectorField = \"document_vector_ds\"\n\n/*\nClustering fields that keep cluster IDs and distances to the clusters.\nNOTE: Only models from the training module will provide clustering fields. \n*/\nvar clustersField = \"document_clusters_is\"\nvar distancesField = \"document_distances_ds\"\n\n/*\nVariable `numClusters` specifies how many top clusters should be kept for the document.\nThe value should be less or equal to the value in the training configuration. \nThe default value of 1 is a good choice for most cases.\n*/\nvar numClusters = 1\n\n/*\nModel output parsing.\n*/\nif (modelOutput.containsKey(\"compressed_vector\")) {\n  doc.addField(compressedVectorField, modelOutput.get(\"compressed_vector\")[0])\n}\n\nif (keepUncompressedVector) {\n  doc.addField(vectorField, modelOutput.get(\"vector\"))\n}\n\nif (numClusters > 0 && modelOutput.containsKey(\"clusters\")) {\n  doc.addField(clustersField, modelOutput.get(\"clusters\").subList(0, numClusters))\n  doc.addField(distancesField, modelOutput.get(\"distances\").subList(0, numClusters))\n}",
+    "storePredictedFields" : false,
+    "type" : "machine-learning",
+    "skip" : false,
+    "label" : "Question Answering Deep Encoding"
+  }, {
+    "id" : "7d962a81-2b75-4f71-b6ec-cb8d5c17d2e5",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T11:20:36.975Z"
+  } ],
+  "properties" : { }
+}

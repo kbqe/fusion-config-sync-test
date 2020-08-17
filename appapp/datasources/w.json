@@ -1,0 +1,56 @@
+{
+  "id" : "w",
+  "created" : "2020-08-14T12:34:16.243Z",
+  "modified" : "2020-08-14T12:34:16.243Z",
+  "connector" : "lucid.web",
+  "type" : "web",
+  "pipeline" : "appapp",
+  "parserId" : "appapp",
+  "properties" : {
+    "initial_mapping" : {
+      "mappings" : [ {
+        "source" : "charSet",
+        "operation" : "move",
+        "target" : "charSet_s"
+      }, {
+        "source" : "fetchedDate",
+        "operation" : "move",
+        "target" : "fetchedDate_dt"
+      }, {
+        "source" : "lastModified",
+        "operation" : "move",
+        "target" : "lastModified_dt"
+      }, {
+        "source" : "signature",
+        "operation" : "move",
+        "target" : "dedupeSignature_s"
+      }, {
+        "source" : "length",
+        "operation" : "move",
+        "target" : "length_l"
+      }, {
+        "source" : "mimeType",
+        "operation" : "move",
+        "target" : "mimeType_s"
+      }, {
+        "source" : "parent",
+        "operation" : "move",
+        "target" : "parent_s"
+      }, {
+        "source" : "owner",
+        "operation" : "move",
+        "target" : "owner_s"
+      }, {
+        "source" : "group",
+        "operation" : "move",
+        "target" : "group_s"
+      } ],
+      "reservedFieldsMappingAllowed" : false,
+      "skip" : false,
+      "id" : "Anda"
+    },
+    "f.cookieSpec" : "browser-compatibility",
+    "collection" : "appapp",
+    "startLinks" : [ "https://en.wikipedia.org/wiki/Main_Page" ]
+  }
+}

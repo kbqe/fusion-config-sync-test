@@ -1,0 +1,14 @@
+{
+  "id" : "real",
+  "created" : "2020-08-14T11:23:41.477Z",
+  "modified" : "2020-08-14T11:23:41.477Z",
+  "connector" : "lucid.fileupload",
+  "type" : "fileupload",
+  "pipeline" : "appapp",
+  "parserId" : "appapp",
+  "properties" : {
+    "mediaType" : "application/octet-stream",
+    "collection" : "appapp",
+    "fileId" : "realestate.csv"
+  }
+}

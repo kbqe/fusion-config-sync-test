@@ -1,0 +1,23 @@
+{
+  "id" : "appapp_phrase_extraction",
+  "sourceFields" : "query",
+  "trainingDataSamplingFraction" : 1.0,
+  "minmatch" : 100,
+  "trainingDataFilterQuery" : "*:*",
+  "dataFormat" : "solr",
+  "enableAutoPublish" : false,
+  "type" : "sip",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T11:20:46.910Z"
+  } ],
+  "outputCollection" : "appapp_query_rewrite_staging",
+  "sparkPartitions" : 200,
+  "randomSeed" : 8180,
+  "fieldToVectorize" : "query",
+  "ngramSize" : 3,
+  "trainingCollection" : "appapp_signals",
+  "attachPhrases" : false,
+  "analyzerConfig" : "{ \"analyzers\": [{ \"name\": \"StdTokLowerStop\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"standard\" },\"filters\": [{ \"type\": \"lowercase\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"StdTokLowerStop\" } ]}",
+  "overwriteOutput" : true
+}

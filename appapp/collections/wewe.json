@@ -1,0 +1,31 @@
+{
+  "id" : "wewe",
+  "createdAt" : "2020-08-14T12:33:27.680Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "wewe",
+      "params" : { },
+      "enabled" : true
+    }
+  },
+  "solrParams" : {
+    "name" : "wewe",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T12:33:32.854Z"
+  } ]
+}

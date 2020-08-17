@@ -1,0 +1,14 @@
+{
+  "id" : "appapp_job_reports",
+  "createdAt" : "2020-08-14T11:20:34.117Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "appapp_job_reports",
+    "numShards" : 1,
+    "replicationFactor" : 1
+  },
+  "type" : "JOB_REPORTS",
+  "relatedCollectionId" : "appapp",
+  "metadata" : { }
+}
