@@ -3,12 +3,26 @@
   "createdAt" : "2020-08-14T12:33:40.136Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
-  "features" : { },
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "wewe_signals_aggr",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "wewe_signals_aggr",
     "numShards" : 1,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 1
+    "maxShardsPerNode" : 2
   },
   "type" : "SIGNALS_AGGREGATION",
   "relatedCollectionId" : "wewe",
@@ -16,5 +30,11 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:33:45.795Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:12.055Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:12.059Z"
   } ]
 }
