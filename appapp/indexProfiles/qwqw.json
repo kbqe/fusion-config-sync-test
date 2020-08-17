@@ -2,10 +2,5 @@
   "id" : "qwqw",
   "indexPipeline" : "appapp",
   "collection" : "appapp",
-  "parser" : "appapp",
-  "additionalProperties" : { },
-  "updates" : [ {
-    "userId" : "admin",
-    "timestamp" : "2020-08-14T12:22:45.306Z"
-  } ]
+  "parser" : "appapp"
 }
