@@ -1,0 +1,6 @@
+{
+  "id" : "qwqw",
+  "parser" : "appapp",
+  "indexPipeline" : "appapp",
+  "collection" : "appapp"
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "sss",
+  "trainingDataFilterQuery" : "*:*",
+  "modelId" : "sss",
+  "popularItemMin" : 2,
+  "itemIdField" : "item_id_s",
+  "implicitRatings" : true,
+  "type" : "als_recommender",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T12:09:13.466Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.522Z"
+  } ],
+  "initialLambda" : 0.01,
+  "sparkConfig" : [ ],
+  "alwaysTrain" : true,
+  "maxTrainingIterations" : 10,
+  "initialRank" : 100,
+  "saveModel" : false,
+  "initialAlpha" : 50.0,
+  "numSims" : 10,
+  "itemMetadataFields" : [ ],
+  "weightField" : "weight_d",
+  "initialBlocks" : -1,
+  "writeOptions" : [ ],
+  "itemMetadataJoinField" : "item_id_s",
+  "gridSearchWidth" : 0,
+  "dataFormat" : "solr",
+  "deleteOldRecs" : true,
+  "randomSeed" : 13,
+  "numRecs" : 10,
+  "userIdField" : "user_id_s",
+  "trainingCollection" : "appapp",
+  "numUserRecsPerItem" : 10,
+  "trainingSampleFraction" : 1.0
+}

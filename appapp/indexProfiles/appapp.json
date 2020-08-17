@@ -1,0 +1,7 @@
+{
+  "id" : "appapp",
+  "parser" : "appapp",
+  "indexPipeline" : "appapp",
+  "collection" : "appapp",
+  "params" : [ ]
+}

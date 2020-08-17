@@ -1,0 +1,20 @@
+{
+  "id" : "wewe_signals",
+  "createdAt" : "2020-08-17T09:55:58.221Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "solrParams" : {
+    "name" : "wewe_signals",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 4,
+    "configTemplate" : "solr/conf/insights.zip"
+  },
+  "type" : "SIGNALS",
+  "relatedCollectionId" : "wewe",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:05.046Z"
+  } ]
+}

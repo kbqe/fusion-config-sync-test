@@ -1,0 +1,44 @@
+{
+  "id" : "wewe_head_tail",
+  "trainingDataSamplingFraction" : 1.0,
+  "trainingDataFilterQuery" : "*:*",
+  "headQueryCntBoost" : 1.0,
+  "minCountFilter" : 20,
+  "countField" : "count_i",
+  "enableAutoPublish" : false,
+  "type" : "headTailAnalysis",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-14T12:33:47.166Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.979Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.986Z"
+  } ],
+  "outputCollection" : "wewe_job_reports",
+  "fieldToVectorize" : "query",
+  "userHead" : -1.0,
+  "tailRewriteCollection" : "wewe_query_rewrite_staging",
+  "signalTypeField" : "type",
+  "userTail" : -1.0,
+  "dataFormat" : "solr",
+  "analyzerConfigQuery" : "{ \"analyzers\": [ { \"name\": \"StdTokLowerStem\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"standard\" },\"filters\": [{ \"type\": \"lowercase\" },{ \"type\": \"englishminimalstem\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"StdTokLowerStem\" } ]}",
+  "topQ" : [ 100.0, 0.01 ],
+  "mainType" : "click",
+  "sparkPartitions" : 200,
+  "overlapThreshold" : 4,
+  "randomSeed" : 1234,
+  "overlapNumBoost" : 10.0,
+  "trainingCollection" : "wewe_signals",
+  "minCountMain" : 1,
+  "lastTraffic" : [ 0.01 ],
+  "trafficCount" : [ 5.0 ],
+  "filterType" : "response",
+  "queryLenThreshold" : 2,
+  "lenScale" : 6,
+  "tailRewrite" : true,
+  "overwriteOutput" : true,
+  "trafficPerc" : [ 0.25, 0.5, 0.75 ]
+}

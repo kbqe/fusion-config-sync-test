@@ -1,0 +1,36 @@
+{
+  "id" : "appapp_job_reports",
+  "createdAt" : "2020-08-14T11:20:34.117Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "appapp_job_reports",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
+  "solrParams" : {
+    "name" : "appapp_job_reports",
+    "numShards" : 1,
+    "replicationFactor" : 1
+  },
+  "type" : "JOB_REPORTS",
+  "relatedCollectionId" : "appapp",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:43.423Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:43.427Z"
+  } ]
+}
