@@ -1,6 +1,7 @@
 {
   "id" : "qqq",
   "stages" : [ {
+    "type" : "text-tagger",
     "id" : "de7b017c-0f58-49fd-bdb4-47496aa5f8ea",
     "paramToTag" : "q",
     "spell_corrections_enabled" : true,
@@ -13,9 +14,9 @@
     "overlaps" : "LONGEST_DOMINANT_RIGHT",
     "params" : [ ],
     "maxWaitMs" : 500,
-    "type" : "text-tagger",
     "skip" : false
   }, {
+    "type" : "recommendation",
     "id" : "10f1e61a-d2a6-4de6-9fb4-5d62858ffb65",
     "numRecommendations" : 10,
     "numSignals" : 100,
@@ -66,54 +67,56 @@
     "rollupWeightStrategy" : "max",
     "queryParamToBoost" : "q",
     "includeEnrichedQuery" : false,
-    "type" : "recommendation",
     "skip" : false
   }, {
+    "type" : "search-fields",
     "id" : "7e1b876a-665c-4fd3-884d-46db80fbfd76",
     "rows" : 10,
     "start" : 0,
-    "sortOrder" : [ ],
     "queryFields" : [ ],
     "returnFields" : [ ],
-    "returnScore" : false,
-    "type" : "search-fields",
-    "skip" : false
+    "skip" : false,
+    "sortOrder" : [ ],
+    "returnScore" : false
   }, {
+    "type" : "facet",
     "id" : "ba14cce7-b07b-48e1-886d-1286979bc6bb",
     "fieldFacets" : [ ],
-    "rangeFacets" : [ ],
-    "type" : "facet",
-    "skip" : false
+    "skip" : false,
+    "rangeFacets" : [ ]
   }, {
+    "type" : "query-rules",
     "id" : "1e1138f5-b7f8-456d-8ad8-2849fbb79483",
     "useOriginalQueryIfNoRulesMatch" : true,
     "matchPartialFilterQueries" : true,
     "handler" : "select",
     "method" : "POST",
-    "ruleLimit" : "100",
     "params" : [ ],
     "hierarchicalFilter" : [ ],
     "headers" : [ ],
     "maxWaitMs" : 500,
-    "type" : "query-rules",
-    "skip" : false
+    "skip" : false,
+    "ruleLimit" : "100"
   }, {
+    "type" : "solr-query",
     "id" : "83287664-080b-4c27-97fe-cfbfb678da2b",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
-    "preferredReplicaType" : "pull",
-    "type" : "solr-query",
     "skip" : false,
-    "responseSignalsEnabled" : true
+    "responseSignalsEnabled" : true,
+    "preferredReplicaType" : "pull"
   }, {
+    "type" : "query-rules-augment-response",
     "id" : "dd7b84e0-e4d1-427b-a564-a86af721dc5e",
     "facetLabelParseDelimiter" : "||",
-    "type" : "query-rules-augment-response",
     "skip" : false
   } ],
   "properties" : { },
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:17:54.150Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:16.532Z"
   } ]
 }

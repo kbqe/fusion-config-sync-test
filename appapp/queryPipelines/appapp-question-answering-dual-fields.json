@@ -1,21 +1,22 @@
 {
   "id" : "appapp-question-answering-dual-fields",
   "stages" : [ {
+    "type" : "search-fields",
     "id" : "b427ea9a-50c9-4e75-87cb-a69273afabf2",
     "rows" : 10,
     "start" : 0,
-    "sortOrder" : [ ],
     "queryFields" : [ ],
     "returnFields" : [ "*", "compressed_document_vector_s", "document_clusters_ss" ],
-    "returnScore" : true,
-    "type" : "search-fields",
-    "skip" : false
+    "skip" : false,
+    "sortOrder" : [ ],
+    "returnScore" : true
   }, {
+    "type" : "fusion-reranking",
     "id" : "7c7e3bc0-e291-4074-a5d9-64752ab96cf6",
     "rowsFromSolrToRerank" : 500,
-    "type" : "fusion-reranking",
     "skip" : false
   }, {
+    "type" : "ml-query",
     "id" : "442db617-62ba-41f2-8ee0-773ddb437ec7",
     "serviceId" : "ml-model-service",
     "modelId" : "change-me",
@@ -23,29 +24,29 @@
     "inputScript" : "/* \nModel input construction. \n*/\nvar modelInput = new java.util.HashMap()\nmodelInput.put(\"text\", request.getFirstParam(\"q\"))\nmodelInput.put(\"pipeline\", \"query\")\nmodelInput.put(\"compress\", \"false\")\nmodelInput.put(\"unidecode\", \"true\")\nmodelInput.put(\"lowercase\", \"false\")\n\nmodelInput",
     "outputScript" : "/*\nDocument clusters Solr field name. If clustering is used then Filter Query is \nconstructed against this field to return all documents that have the same clusters as \nquery. This concept is similar to Inverted File Index (IVF).\n\nNOTE: Only models from the training module support clustering.\n*/\nvar documentClustersField = \"question_clusters_is\"\n\n/*\nVariable `numClusters` specifies how many top clusters should be used for each query.\nThe value should be less or equal to the value in the training configuration. \nBy default it's set to 0 which means that clustering isn't used. If you want to use \nclustering, value 10 is a good choice for most cases. \n*/\nvar numClusters = 0\n\n/*\nModel output parsing.\n*/\nvar queryVector = modelOutput.get(\"vector\").stream().mapToDouble(function(d){return d}).toArray()\ncontext.put(\"query_vector\", queryVector)\n\nif (numClusters > 0 && modelOutput.containsKey(\"clusters\")) {\n    clusters = Java.from(modelOutput.get(\"clusters\").subList(0, numClusters))\n    if (clusters.length > 1) {\n      fq = documentClustersField+\":(\"+clusters.join(' OR ')+\")\"\n    } else {\n      fq = documentClustersField+\":\"+clusters[0]\n    }\n    \n    request.putSingleParam(\"q\", \"*:*\")\n    request.addParam(\"fq\", fq)\n}",
     "requiredLicensedCapability" : "fusion.ai",
-    "type" : "ml-query",
     "skip" : false,
     "label" : "Query Encoding"
   }, {
+    "type" : "stop-filter-query-stage",
     "id" : "0fd253b1-83df-4ee7-aca7-d104c43f06b8",
     "inputParam" : "q",
     "stopWords" : "a,about,actual,actually,am,an,and,answer,any,anyone,anything,anyway,are,ask,asked,asking,at,away,based,basically,be,been,being,btw,by,can,consider,considered,could,did,do,does,doing,done,especially,essentially,etc,feel,find,for,found,from,generally,get,getting,give,given,giving,go,goes,gone,got,guess,had,happen,happened,happening,has,have,having,he,hello,help,hence,her,here,hers,hey,him,his,hope,hoped,however,i,I'd,i'm,'m,'ll,'d,ie,if,im,in,into,is,it,its,just,keeping,kept,knew,know,let,like,likely,list,look,looked,looking,makes,making,maybe,me,mention,mentioned,might,mind,much,my,need,needed,of,off,on,onto,otherwise,our,ours,out,perhaps,please,possible,possibly,pretty,probably,provide,provided,question,quite,rather,really,regard,regarding,relatively,said,saw,say,saying,search,searching,see,seeing,seem,seemed,seeming,seems,seen,select,she,should,show,simply,so,some,somehow,something,specifically,still,such,suggest,suggested,sure,take,taken,taking,tell,thank,thanks,that,the,their,them,then,there,thereby,therefore,therein,these,they,thing,think,thinking,this,those,though,thought,through,throughout,thru,thus,to,too,took,totally,toward,towards,tried,try,trying,up,upon,us,use,used,using,usually,very,via,want,wanted,was,we,went,were,what,will,wish,wished,with,within,wonder,wondering,would,yet,you,your,yours",
-    "type" : "stop-filter-query-stage",
     "skip" : false
   }, {
+    "type" : "query-escaping-query-stage",
     "id" : "4cb5a0bf-2b1b-497b-a046-db5fa3886536",
     "inputParam" : "q",
-    "type" : "query-escaping-query-stage",
     "skip" : false
   }, {
+    "type" : "solr-query",
     "id" : "a4550f69-9c55-4ee8-b050-16068d4da61a",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
-    "preferredReplicaType" : "pull",
-    "type" : "solr-query",
     "skip" : false,
-    "responseSignalsEnabled" : true
+    "responseSignalsEnabled" : true,
+    "preferredReplicaType" : "pull"
   }, {
+    "type" : "per-result-vectors-distance",
     "id" : "81341bce-62c9-41b9-8ad2-49cb10f357dd",
     "queryVectorContextKey" : "query_vector",
     "documentVectorField" : "compressed_question_vector_s",
@@ -54,10 +55,10 @@
     "documentDistanceResultField" : "qq_distance",
     "failOnError" : false,
     "requiredLicensedCapability" : "fusion.ai.qa",
-    "type" : "per-result-vectors-distance",
     "skip" : false,
     "label" : "QQ Vectors Distance"
   }, {
+    "type" : "per-result-vectors-distance",
     "id" : "25b3fd39-57ae-4741-b901-af00cda3c57a",
     "queryVectorContextKey" : "query_vector",
     "documentVectorField" : "compressed_answer_vector_s",
@@ -66,27 +67,29 @@
     "documentDistanceResultField" : "qa_distance",
     "failOnError" : false,
     "requiredLicensedCapability" : "fusion.ai.qa",
-    "type" : "per-result-vectors-distance",
     "skip" : false,
     "label" : "QA Vectors Distance"
   }, {
+    "type" : "response-math-expression",
     "id" : "37694d3b-957e-48cc-8aef-b35341cfd6e1",
     "expression" : "0.2 * score / max_score + 0.4 * qq_distance + 0.4 * qa_distance",
     "resultFieldName" : "ensemble_score",
     "requiredLicensedCapability" : "fusion.ai.qa",
-    "type" : "response-math-expression",
     "skip" : false
   }, {
+    "type" : "result-doc-field-sorting",
     "id" : "9a7c3598-16ef-4fa4-82b6-a3278b160bb2",
     "sortField" : "ensemble_score",
     "sortOrder" : "desc",
     "failOnError" : false,
-    "type" : "result-doc-field-sorting",
     "skip" : false
   } ],
+  "properties" : { },
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T11:20:38.680Z"
-  } ],
-  "properties" : { }
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:15.045Z"
+  } ]
 }
