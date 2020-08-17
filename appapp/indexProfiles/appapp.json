@@ -1,11 +1,7 @@
 {
   "id" : "appapp",
-  "parser" : "appapp",
   "indexPipeline" : "appapp",
   "collection" : "appapp",
-  "params" : [ ],
-  "updates" : [ {
-    "userId" : "admin",
-    "timestamp" : "2020-08-14T11:20:34.671Z"
-  } ]
+  "parser" : "appapp",
+  "params" : [ ]
 }
