@@ -23,6 +23,7 @@
   "implicitRatings" : true,
   "alwaysTrain" : true,
   "deleteOldRecs" : true,
+  "itemMetadataJoinField" : "item_id_s",
   "itemMetadataFields" : [ ],
   "sparkConfig" : [ ],
   "writeOptions" : [ ],
@@ -30,5 +31,8 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:09:13.466Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.522Z"
   } ]
 }
