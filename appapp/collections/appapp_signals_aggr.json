@@ -3,6 +3,21 @@
   "createdAt" : "2020-08-14T11:20:48.740Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "appapp_signals_aggr",
+      "params" : {
+        "idField" : "id",
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "appapp_signals_aggr",
     "numShards" : 1,
