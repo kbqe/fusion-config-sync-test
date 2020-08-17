@@ -1,0 +1,14 @@
+{
+  "id" : "system_messages",
+  "createdAt" : "2020-08-17T10:59:33.443Z",
+  "searchClusterId" : "default",
+  "commitWithin" : -1,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_messages",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "MESSAGES",
+  "metadata" : { }
+}

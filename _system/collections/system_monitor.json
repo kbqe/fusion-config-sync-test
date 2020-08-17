@@ -1,0 +1,15 @@
+{
+  "id" : "system_monitor",
+  "createdAt" : "2020-08-17T11:00:12.617Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_monitor",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "METRICS",
+  "metadata" : { }
+}
