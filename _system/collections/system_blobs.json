@@ -1,0 +1,15 @@
+{
+  "id" : "system_blobs",
+  "createdAt" : "2020-08-17T10:59:54.099Z",
+  "searchClusterId" : "default",
+  "commitWithin" : -1,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_blobs",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "BLOBS",
+  "metadata" : { }
+}

@@ -1,0 +1,14 @@
+{
+  "id" : "system_autocomplete",
+  "createdAt" : "2020-08-17T11:00:01.187Z",
+  "searchClusterId" : "default",
+  "commitWithin" : -1,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_autocomplete",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "AUTOCOMPLETE_DOCUMENTS",
+  "metadata" : { }
+}
