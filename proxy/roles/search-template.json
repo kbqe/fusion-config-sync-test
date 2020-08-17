@@ -1,0 +1,30 @@
+{
+  "id" : "7e598e45-5a86-450c-baab-8d0a2905e493",
+  "name" : "search-template",
+  "createdAt" : "2020-08-17T10:59:29Z",
+  "desc" : "Search role template for a particular app. Copy and replace app-name with your Fusion app",
+  "permissions" : [ {
+    "methods" : [ "POST", "GET" ],
+    "path" : "/apps/MYAPP/query/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST" ],
+    "path" : "/apps/MYAPP/signals/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST" ],
+    "path" : "/signals/MYAPP",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "GET" ],
+    "path" : "/query/MYAPP",
+    "params" : { }
+  }, {
+    "methods" : [ "PATCH" ],
+    "path" : "/users/{id}",
+    "params" : {
+      "id" : [ "#ID" ]
+    }
+  } ],
+  "uiPermissions" : [ ]
+}
