@@ -1,0 +1,28 @@
+{
+  "type" : "argo-qna-coldstart",
+  "id" : "QnAColdstartTraining",
+  "trainingCollection" : "appapp_job_reports",
+  "testMode" : false,
+  "deployModelName" : "aaa",
+  "modelReplicas" : 1,
+  "useCustomEmbeddings" : false,
+  "infBatch" : 512,
+  "topKClusters" : 10,
+  "w2vEpochs" : 15,
+  "w2vVectorSize" : 150,
+  "w2vWindowSize" : 8,
+  "textColName" : "aaa",
+  "seed" : 12345,
+  "minTokensNum" : 1,
+  "maxTokensNum" : 5000,
+  "maxVocabSize" : 100000,
+  "lowerCases" : true,
+  "unidecode" : true,
+  "scaleOnly" : false,
+  "workflowName" : "argo-qna-coldstart-workflow",
+  "useCustomScript" : false,
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-17T13:40:48.474Z"
+  } ]
+}
