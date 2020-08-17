@@ -1,0 +1,16 @@
+{
+  "id" : "da33bd61-d97c-4749-9d2b-76a4f8000667",
+  "name" : "webapps-role",
+  "createdAt" : "2020-08-17T10:59:29Z",
+  "desc" : "Can list and download webapps",
+  "permissions" : [ {
+    "methods" : [ "GET", "HEAD" ],
+    "path" : "/webapps/**",
+    "params" : { }
+  }, {
+    "methods" : [ "GET", "HEAD" ],
+    "path" : "/license",
+    "params" : { }
+  } ],
+  "uiPermissions" : [ ]
+}

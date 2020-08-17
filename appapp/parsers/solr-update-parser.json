@@ -1,0 +1,20 @@
+{
+  "id" : "solr-update-parser",
+  "enableMediaTypeDetection" : true,
+  "maxParserDepth" : 16,
+  "maxFieldLength" : -1,
+  "parserStages" : [ {
+    "type" : "solr-update",
+    "enabled" : true,
+    "mediaTypes" : [ ],
+    "pathPatterns" : [ ],
+    "errorHandling" : "mark",
+    "id" : "5e7fe63b-605f-494b-8eb9-a007385fc4fe",
+    "enableXml" : true,
+    "enableJson" : true,
+    "enableCsv" : true,
+    "inheritMediaTypes" : true,
+    "ignoredMediaTypes" : [ ],
+    "outputFieldPrefix" : ""
+  } ]
+}

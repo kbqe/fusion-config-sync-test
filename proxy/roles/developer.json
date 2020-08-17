@@ -1,0 +1,214 @@
+{
+  "id" : "88ce120d-3122-465c-8c71-6a23899739e1",
+  "name" : "developer",
+  "createdAt" : "2020-08-17T10:59:29Z",
+  "desc" : "Developer access with read/write permission required for building/running applications.",
+  "permissions" : [ {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/system/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/stopwords/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/usage/**",
+    "params" : { }
+  }, {
+    "methods" : [ "GET" ],
+    "path" : "/features/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/blobs/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/scheduler/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/experiments",
+    "params" : { }
+  }, {
+    "methods" : [ "GET" ],
+    "path" : "/introspect/**",
+    "params" : { }
+  }, {
+    "methods" : [ "PUT" ],
+    "path" : "/usage/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/index-stages/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/index-stage-plugins/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/messaging/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/catalog",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/parsers/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/appkit/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/index-profiles/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/recommend/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/history/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/apps/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "GET" ],
+    "path" : "/dynamicSchema/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/solr/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "GET" ],
+    "path" : "/query/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/signals/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/searchLogs/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/query-pipelines/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/configurations/**",
+    "params" : { }
+  }, {
+    "methods" : [ "GET" ],
+    "path" : "/suggestions/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/searchCluster/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/index-pipelines/**",
+    "params" : { }
+  }, {
+    "methods" : [ "GET" ],
+    "path" : "/license",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/spark/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/query-stages/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/prefs/apps/search/*",
+    "params" : { }
+  }, {
+    "methods" : [ "GET" ],
+    "path" : "/nodes/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/solrAdmin/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/synonyms/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/jobs/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "OPTIONS", "DELETE", "HEAD" ],
+    "path" : "/collections/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/connectors/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/groups/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/query-profiles/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/templates/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/tasks/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/links/**",
+    "params" : { }
+  }, {
+    "methods" : [ "PATCH" ],
+    "path" : "/users/{id}",
+    "params" : {
+      "id" : [ "#ID" ]
+    }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/registration/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST" ],
+    "path" : "/index/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET" ],
+    "path" : "/objects/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/insights/apps/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/devops/**",
+    "params" : { }
+  }, {
+    "methods" : [ "POST", "PUT", "GET", "DELETE", "HEAD" ],
+    "path" : "/rules/apps/**",
+    "params" : { }
+  } ],
+  "uiPermissions" : [ "about-fusion", "logout", "experiments", "devops", "insights", "log-viewer", "object-explorer", "rules", "messaging", "solr-clusters", "collections", "collections.commit", "collections.clear", "collections.delete", "datasources", "solr-config", "stopwords", "synonyms", "query-workbench", "quickstart", "index-workbench", "scheduler", "dashboards", "launcher", "blobs", "jobs", "tasks", "links", "groups", "fields", "aggregations", "parsers", "index-workbench", "index-pipelines", "index-pipelines.delete", "index-profiles", "query-workbench", "query-pipelines", "query-pipelines.delete", "query-profiles", "system" ]
+}
