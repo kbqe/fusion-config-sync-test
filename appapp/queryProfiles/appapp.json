@@ -1,10 +1,6 @@
 {
   "id" : "appapp",
   "queryPipeline" : "appapp",
-  "searchHandler" : "/select",
   "collection" : "appapp",
-  "updates" : [ {
-    "userId" : "admin",
-    "timestamp" : "2020-08-14T11:20:38.319Z"
-  } ]
+  "searchHandler" : "/select"
 }
