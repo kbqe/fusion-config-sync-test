@@ -1,0 +1,16 @@
+{
+  "id" : "system_logs",
+  "createdAt" : "2020-08-17T10:59:45.472Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_logs",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1,
+    "policy" : "fusion"
+  },
+  "type" : "LOGS",
+  "metadata" : { }
+}
