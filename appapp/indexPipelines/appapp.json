@@ -1,33 +1,36 @@
 {
   "id" : "appapp",
   "stages" : [ {
+    "type" : "field-mapping",
     "id" : "1550638b-215f-477f-8c5a-017fe610c89b",
     "mappings" : [ ],
     "reservedFieldsMappingAllowed" : false,
-    "type" : "field-mapping",
     "skip" : false
   }, {
+    "type" : "solr-dynamic-field-name-mapping",
     "id" : "8f055e01-14fa-4ad4-93b3-95cba66a18cc",
     "duplicateSingleValuedFields" : false,
     "fieldsToExclude" : [ ],
     "advancedTextFieldsIndexing" : true,
     "maxTextLengthForAdvancedIndexing" : 100,
-    "type" : "solr-dynamic-field-name-mapping",
     "skip" : false
   }, {
+    "type" : "solr-index",
     "id" : "76869587-74c1-46c6-9bc4-47bc2527af1b",
     "enforceSchema" : true,
-    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : true,
+    "skip" : false,
     "allowBlacklistedRequestParameters" : false,
-    "type" : "solr-index",
-    "skip" : false
+    "fieldsList" : false
   } ],
+  "properties" : { },
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T11:20:34.448Z"
-  } ],
-  "properties" : { }
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:17.678Z"
+  } ]
 }
