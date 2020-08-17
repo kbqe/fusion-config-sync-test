@@ -1,0 +1,15 @@
+{
+  "type" : "argo-deploy-model",
+  "id" : "aaa",
+  "deployModelName" : "aaa",
+  "modelReplicas" : 1,
+  "modelDockerImage" : "aaa",
+  "modelDockerRepo" : "aaa",
+  "columnNames" : "[output1, output2]",
+  "workflowName" : "argo-deploy-model-workflow",
+  "useCustomScript" : false,
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-17T13:35:31.482Z"
+  } ]
+}
