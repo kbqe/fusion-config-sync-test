@@ -34,5 +34,11 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:33:47.166Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.979Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:13.986Z"
   } ]
 }
