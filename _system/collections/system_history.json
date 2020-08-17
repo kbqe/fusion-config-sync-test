@@ -1,0 +1,14 @@
+{
+  "id" : "system_history",
+  "createdAt" : "2020-08-17T10:59:15.454Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "system_history",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "HISTORY",
+  "metadata" : { }
+}
