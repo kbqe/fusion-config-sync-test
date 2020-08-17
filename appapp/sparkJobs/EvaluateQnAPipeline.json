@@ -1,0 +1,29 @@
+{
+  "type" : "argo-qna-evaluate",
+  "id" : "EvaluateQnAPipeline",
+  "inputEvaluationCollection" : "wewe",
+  "outputEvaluationCollection" : "wewe",
+  "seed" : 12345,
+  "testQuestionFieldInFile" : "question",
+  "matchFieldInFile" : "answer_id",
+  "matchFieldInFusion" : "doc_id",
+  "appName" : "new app",
+  "queryPipelineName" : "qqq",
+  "collectionName" : "wewe",
+  "additionalParams" : "{}",
+  "returnFields" : "id",
+  "rankingScoreField" : "ensemble_score",
+  "metricsList" : "[\"recall\"]",
+  "kList" : "[1,3,5]",
+  "doWeightsSelection" : true,
+  "solrScaleFunc" : "max",
+  "scoreListForWeights" : "score,vectors_distance",
+  "targetRankingMetric" : "recall@3",
+  "fetcherType" : "query-service",
+  "workflowName" : "argo-qna-evaluate-workflow",
+  "useCustomScript" : false,
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-17T13:47:53.227Z"
+  } ]
+}
