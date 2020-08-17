@@ -10,6 +10,19 @@
       "params" : { },
       "enabled" : true
     },
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "wewe",
+      "params" : {
+        "idField" : "id",
+        "itemsForItem" : true,
+        "queriesForQuery" : true,
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "content" : true
+      },
+      "enabled" : false
+    },
     "signals" : {
       "name" : "signals",
       "collectionId" : "wewe",
@@ -27,5 +40,11 @@
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T12:33:32.854Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:44.453Z"
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:44.456Z"
   } ]
 }
