@@ -1,0 +1,11 @@
+{
+  "type" : "argo-delete-model",
+  "id" : "CreateSeldonCoreModelDeployment",
+  "modelName" : "spacy",
+  "workflowName" : "argo-delete-model-workflow",
+  "useCustomScript" : false,
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-17T13:38:24.927Z"
+  } ]
+}
