@@ -1,19 +1,22 @@
 {
   "id" : "appapp_query_rewrite_staging",
   "stages" : [ {
+    "type" : "solr-index",
     "id" : "274dbea8-dd12-424b-9090-8a8dabd29533",
     "enforceSchema" : true,
-    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : true,
+    "skip" : false,
     "allowBlacklistedRequestParameters" : false,
-    "type" : "solr-index",
-    "skip" : false
+    "fieldsList" : false
   } ],
+  "properties" : { },
   "updates" : [ {
     "userId" : "admin",
     "timestamp" : "2020-08-14T11:20:35.138Z"
-  } ],
-  "properties" : { }
+  }, {
+    "userId" : "config-sync_service_account",
+    "timestamp" : "2020-08-17T09:56:17.854Z"
+  } ]
 }
