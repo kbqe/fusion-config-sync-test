@@ -3,6 +3,7 @@
   "createdAt" : "2020-08-21T12:14:59.514Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
+  "features" : { },
   "solrParams" : {
     "name" : "111_signals_aggr",
     "numShards" : 1,
