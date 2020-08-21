@@ -3,6 +3,33 @@
   "createdAt" : "2020-02-05T15:05:58.354Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "ImportData2",
+      "params" : { },
+      "enabled" : true
+    },
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "ImportData2",
+      "params" : {
+        "idField" : "id",
+        "itemsForItem" : true,
+        "queriesForQuery" : false,
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "content" : true
+      },
+      "enabled" : false
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "ImportData2",
+      "params" : { },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "ImportData2",
     "numShards" : 1,
