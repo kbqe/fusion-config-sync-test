@@ -3,6 +3,21 @@
   "createdAt" : "2020-02-05T15:05:58.456Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "ImportData2_job_reports",
+      "params" : {
+        "idField" : "id",
+        "itemsForItem" : true,
+        "queriesForQuery" : false,
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "content" : true
+      },
+      "enabled" : false
+    }
+  },
   "solrParams" : {
     "name" : "ImportData2_job_reports",
     "numShards" : 1,
