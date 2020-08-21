@@ -1,0 +1,15 @@
+{
+  "id" : "111_user_prefs",
+  "createdAt" : "2020-08-21T12:14:42.327Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "111_user_prefs",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/user_prefs.zip"
+  },
+  "type" : "USER_PREFS",
+  "relatedCollectionId" : "111",
+  "metadata" : { }
+}

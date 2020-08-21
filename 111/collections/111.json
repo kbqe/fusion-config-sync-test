@@ -1,0 +1,13 @@
+{
+  "id" : "111",
+  "createdAt" : "2020-08-21T12:14:42.260Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "111",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { }
+}

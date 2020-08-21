@@ -1,0 +1,10 @@
+{
+  "id" : "111",
+  "queryPipeline" : "111",
+  "searchHandler" : "/select",
+  "collection" : "111",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-21T12:14:44.056Z"
+  } ]
+}

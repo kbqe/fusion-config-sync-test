@@ -1,0 +1,19 @@
+{
+  "id" : "111_query_rewrite_staging",
+  "stages" : [ {
+    "id" : "fd5da05a-5619-4caa-b488-15a487693280",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-21T12:14:43.201Z"
+  } ],
+  "properties" : { }
+}
