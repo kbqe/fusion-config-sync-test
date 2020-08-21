@@ -1,0 +1,12 @@
+{
+  "resource" : "spark:ImportData2_click_signals_aggregation",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "interval",
+    "enabled" : true,
+    "interval" : 15,
+    "timeUnit" : "minute",
+    "startTime" : "2020-02-05T15:22:22.271Z"
+  } ],
+  "default" : false
+}

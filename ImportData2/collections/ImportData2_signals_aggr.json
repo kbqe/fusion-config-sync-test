@@ -1,0 +1,15 @@
+{
+  "id" : "ImportData2_signals_aggr",
+  "createdAt" : "2020-02-05T15:07:00.389Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "ImportData2_signals_aggr",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "SIGNALS_AGGREGATION",
+  "relatedCollectionId" : "ImportData2",
+  "metadata" : { }
+}

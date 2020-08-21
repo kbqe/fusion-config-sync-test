@@ -1,0 +1,28 @@
+{
+  "id" : "ImportData2_synonym_detection",
+  "docIdField" : "doc_id",
+  "trainingDataSamplingFraction" : 1.0,
+  "trainingDataFilterQuery" : "*:*",
+  "dataFormat" : "solr",
+  "analyzerConfigQuery" : "{ \"analyzers\": [ { \"name\": \"LetterTokLowerStem\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"letter\" },\"filters\": [{ \"type\": \"lowercase\" },{ \"type\": \"KStem\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"LetterTokLowerStem\" } ]}",
+  "keyPhraseFilterQuery" : "type:phrase",
+  "similarityThreshold" : 0.01,
+  "countField" : "count_i",
+  "enableAutoPublish" : false,
+  "type" : "synonymDetection",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:43.186Z"
+  } ],
+  "outputCollection" : "ImportData2_query_rewrite_staging",
+  "sparkPartitions" : 200,
+  "overlapThreshold" : 0.5,
+  "fieldToVectorize" : "query",
+  "randomSeed" : 1234,
+  "minQueryCount" : 5,
+  "trainingCollection" : "ImportData2_signals_aggr",
+  "keyPhraseCollection" : "ImportData2_query_rewrite_staging",
+  "misspellingsFilterQuery" : "type:spell",
+  "misspellingCollection" : "ImportData2_query_rewrite_staging",
+  "overwriteOutput" : true
+}

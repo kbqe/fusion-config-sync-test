@@ -1,0 +1,16 @@
+{
+  "id" : "ImportData2_signals",
+  "createdAt" : "2020-02-05T15:06:36.717Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "ImportData2_signals",
+    "numShards" : 2,
+    "replicationFactor" : 1,
+    "maxShardsPerNode" : 2,
+    "configTemplate" : "solr/conf/insights.zip"
+  },
+  "type" : "SIGNALS",
+  "relatedCollectionId" : "ImportData2",
+  "metadata" : { }
+}

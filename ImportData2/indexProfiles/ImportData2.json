@@ -1,0 +1,11 @@
+{
+  "id" : "ImportData2",
+  "parser" : "ImportData2",
+  "indexPipeline" : "ImportData2",
+  "collection" : "ImportData2",
+  "params" : [ ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:41.515Z"
+  } ]
+}

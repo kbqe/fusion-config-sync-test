@@ -1,0 +1,12 @@
+{
+  "resource" : "spark:ImportData2_user_item_preferences_aggregation",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "interval",
+    "enabled" : true,
+    "interval" : 1,
+    "timeUnit" : "day",
+    "startTime" : "2020-02-05T15:24:24.203Z"
+  } ],
+  "default" : false
+}

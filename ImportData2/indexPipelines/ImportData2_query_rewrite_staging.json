@@ -1,0 +1,19 @@
+{
+  "id" : "ImportData2_query_rewrite_staging",
+  "stages" : [ {
+    "id" : "ac339524-40e8-4e05-84de-1de692c0b415",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : false,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:41.370Z"
+  } ],
+  "properties" : { }
+}

@@ -1,0 +1,12 @@
+{
+  "resource" : "spark:ImportData2_spell_correction",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "interval",
+    "enabled" : true,
+    "interval" : 1,
+    "timeUnit" : "day",
+    "startTime" : "2020-02-05T15:20:58.978Z"
+  } ],
+  "default" : false
+}

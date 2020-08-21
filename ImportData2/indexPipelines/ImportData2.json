@@ -1,0 +1,33 @@
+{
+  "id" : "ImportData2",
+  "stages" : [ {
+    "id" : "e7b2b004-4eb9-4ddc-b205-bc3cab031334",
+    "mappings" : [ ],
+    "reservedFieldsMappingAllowed" : false,
+    "type" : "field-mapping",
+    "skip" : false
+  }, {
+    "id" : "0b2c5789-1991-4624-8eef-1b5a44452bfe",
+    "duplicateSingleValuedFields" : false,
+    "fieldsToExclude" : [ ],
+    "advancedTextFieldsIndexing" : true,
+    "maxTextLengthForAdvancedIndexing" : 100,
+    "type" : "solr-dynamic-field-name-mapping",
+    "skip" : false
+  }, {
+    "id" : "1a6afa57-50af-4fcd-9fb1-0baf1a2d98e4",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : false,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:41.232Z"
+  } ],
+  "properties" : { }
+}

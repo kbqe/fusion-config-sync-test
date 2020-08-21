@@ -1,0 +1,10 @@
+{
+  "id" : "ImportData2",
+  "queryPipeline" : "ImportData2",
+  "searchHandler" : "/select",
+  "collection" : "ImportData2",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:41.678Z"
+  } ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "ImportData2_rules_simulator",
+  "queryPipeline" : "ImportData2",
+  "searchHandler" : "/select",
+  "collection" : "ImportData2",
+  "params" : [ {
+    "key" : "lw.rules.simulate",
+    "value" : "ImportData2_query_rewrite_staging",
+    "policy" : "default"
+  }, {
+    "key" : "lw.rules.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.tagger.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.skip_response_signal",
+    "value" : "1",
+    "policy" : "default"
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-08-18T15:13:41.692Z"
+  } ]
+}

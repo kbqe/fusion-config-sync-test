@@ -1,0 +1,11 @@
+{
+  "resource" : "spark:ImportData2_phrase_extraction",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "job_completion",
+    "enabled" : true,
+    "triggerType" : "on_success",
+    "otherJob" : "spark:ImportData2_spell_correction"
+  } ],
+  "default" : false
+}

@@ -1,0 +1,12 @@
+{
+  "resource" : "spark:ImportData2_session_rollup",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "interval",
+    "enabled" : true,
+    "interval" : 15,
+    "timeUnit" : "minute",
+    "startTime" : "2020-02-05T15:22:23.378Z"
+  } ],
+  "default" : false
+}

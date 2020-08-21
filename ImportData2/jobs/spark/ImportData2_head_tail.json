@@ -1,0 +1,12 @@
+{
+  "resource" : "spark:ImportData2_head_tail",
+  "enabled" : true,
+  "triggers" : [ {
+    "type" : "interval",
+    "enabled" : true,
+    "interval" : 1,
+    "timeUnit" : "day",
+    "startTime" : "2020-02-06T15:07:26.032Z"
+  } ],
+  "default" : false
+}

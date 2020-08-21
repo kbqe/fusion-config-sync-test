@@ -1,0 +1,15 @@
+{
+  "id" : "ImportData2_user_prefs",
+  "createdAt" : "2020-02-05T15:05:58.398Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "ImportData2_user_prefs",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/user_prefs.zip"
+  },
+  "type" : "USER_PREFS",
+  "relatedCollectionId" : "ImportData2",
+  "metadata" : { }
+}

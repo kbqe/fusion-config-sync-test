@@ -1,0 +1,15 @@
+{
+  "id" : "ImportData2_query_rewrite",
+  "createdAt" : "2020-02-05T15:05:58.525Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "ImportData2_query_rewrite",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/query_rewrite.zip"
+  },
+  "type" : "QUERY_REWRITE",
+  "relatedCollectionId" : "ImportData2",
+  "metadata" : { }
+}
