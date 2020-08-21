@@ -3,6 +3,20 @@
   "createdAt" : "2020-08-21T12:14:42.260Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "111",
+      "params" : { },
+      "enabled" : true
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "111",
+      "params" : { },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "111",
     "numShards" : 2,
