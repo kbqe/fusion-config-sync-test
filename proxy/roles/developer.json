@@ -1,18 +1,18 @@
 {
-  "id" : "6ba14c07-6cba-4d0d-8e81-21c5f75aa516",
+  "id" : "0cf85a44-387d-48bc-b524-b016711a0acb",
   "name" : "developer",
-  "createdAt" : "2020-09-18T12:06:01Z",
+  "createdAt" : "2020-09-18T15:28:17Z",
   "desc" : "Developer access with read/write permission required for building/running applications.",
   "permissions" : [ {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/system/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/stopwords/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/usage/**",
     "params" : { }
   }, {
@@ -20,15 +20,15 @@
     "path" : "/features/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/blobs/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/scheduler/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/experiments",
     "params" : { }
   }, {
@@ -40,43 +40,43 @@
     "path" : "/usage/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/index-stages/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/index-stage-plugins/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/messaging/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/catalog",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/parsers/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/appkit/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/index-profiles/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/recommend/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/history/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/apps/**",
     "params" : { }
   }, {
@@ -84,7 +84,7 @@
     "path" : "/dynamicSchema/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/solr/**",
     "params" : { }
   }, {
@@ -92,19 +92,19 @@
     "path" : "/query/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/signals/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/searchLogs/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/query-pipelines/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/configurations/**",
     "params" : { }
   }, {
@@ -112,11 +112,11 @@
     "path" : "/suggestions/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/searchCluster/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/index-pipelines/**",
     "params" : { }
   }, {
@@ -124,15 +124,15 @@
     "path" : "/license",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/spark/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/query-stages/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/prefs/apps/search/*",
     "params" : { }
   }, {
@@ -140,43 +140,43 @@
     "path" : "/nodes/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/solrAdmin/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/synonyms/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/jobs/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET", "OPTIONS" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET", "OPTIONS" ],
     "path" : "/collections/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/connectors/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/groups/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/query-profiles/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/templates/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/tasks/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/links/**",
     "params" : { }
   }, {
@@ -186,7 +186,7 @@
       "id" : [ "#ID" ]
     }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/registration/**",
     "params" : { }
   }, {
@@ -194,19 +194,19 @@
     "path" : "/index/**",
     "params" : { }
   }, {
-    "methods" : [ "POST", "PUT", "GET" ],
+    "methods" : [ "PUT", "POST", "GET" ],
     "path" : "/objects/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/insights/apps/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/devops/**",
     "params" : { }
   }, {
-    "methods" : [ "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "POST", "GET" ],
     "path" : "/rules/apps/**",
     "params" : { }
   } ],

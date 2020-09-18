@@ -1,14 +1,14 @@
 {
-  "id" : "d6260f2f-64e9-43eb-9978-a05cfc4264d3",
+  "id" : "88baa451-4173-45e2-981d-2e5441afdbd7",
   "name" : "rules",
-  "createdAt" : "2020-09-18T12:06:01Z",
+  "createdAt" : "2020-09-18T15:28:17Z",
   "desc" : "Provides query-rewrite API access to the all Fusion apps.",
   "permissions" : [ {
     "methods" : [ "GET" ],
     "path" : "/apps/*/query-profiles/**",
     "params" : { }
   }, {
-    "methods" : [ "PATCH", "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "PATCH", "POST", "GET" ],
     "path" : "/apps/*/query-rewrite/**",
     "params" : { }
   }, {

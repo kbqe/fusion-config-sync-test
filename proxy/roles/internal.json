@@ -1,10 +1,10 @@
 {
-  "id" : "b8a0a264-065c-4b38-bab9-3e6019a7561c",
+  "id" : "a85b9779-8855-44d6-aeab-013f40158506",
   "name" : "internal",
-  "createdAt" : "2020-09-18T12:06:01Z",
+  "createdAt" : "2020-09-18T15:28:17Z",
   "desc" : "Internal role for any service account; cannot be used from outside the gateway.",
   "permissions" : [ {
-    "methods" : [ "PATCH", "HEAD", "POST", "PUT", "DELETE", "GET" ],
+    "methods" : [ "HEAD", "PUT", "DELETE", "PATCH", "POST", "GET" ],
     "path" : "/**",
     "params" : { }
   } ],

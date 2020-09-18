@@ -2,7 +2,7 @@
   "id" : "_system",
   "stages" : [ {
     "type" : "solr-query",
-    "id" : "46c70b42-2b1a-40f4-85f9-fe161667b3d4",
+    "id" : "b6520623-8650-4f12-95b3-1942d8d0ee85",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
     "skip" : false,

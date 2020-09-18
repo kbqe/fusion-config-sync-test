@@ -1,7 +1,7 @@
 {
-  "id" : "4b987160-038b-4c60-a49c-3807383fc1a0",
+  "id" : "f0f6aaae-9103-4a61-8f55-3e986dc87da8",
   "name" : "webapps-role",
-  "createdAt" : "2020-09-18T12:06:01Z",
+  "createdAt" : "2020-09-18T15:28:17Z",
   "desc" : "Can list and download webapps",
   "permissions" : [ {
     "methods" : [ "HEAD", "GET" ],
