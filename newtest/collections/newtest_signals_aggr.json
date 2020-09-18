@@ -1,0 +1,15 @@
+{
+  "id" : "newtest_signals_aggr",
+  "createdAt" : "2020-09-18T16:33:09.530Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "solrParams" : {
+    "name" : "newtest_signals_aggr",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "SIGNALS_AGGREGATION",
+  "relatedCollectionId" : "newtest",
+  "metadata" : { }
+}

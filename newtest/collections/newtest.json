@@ -1,0 +1,13 @@
+{
+  "id" : "newtest",
+  "createdAt" : "2020-09-18T16:32:57.696Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "newtest",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { }
+}

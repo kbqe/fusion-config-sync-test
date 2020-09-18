@@ -1,0 +1,17 @@
+{
+  "id" : "newtest_signals",
+  "createdAt" : "2020-09-18T16:33:03.883Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "features" : { },
+  "solrParams" : {
+    "name" : "newtest_signals",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 2,
+    "configTemplate" : "solr/conf/insights.zip"
+  },
+  "type" : "SIGNALS",
+  "relatedCollectionId" : "newtest",
+  "metadata" : { }
+}

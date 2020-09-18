@@ -1,0 +1,7 @@
+{
+  "id" : "newtest",
+  "parser" : "newtest",
+  "indexPipeline" : "newtest",
+  "collection" : "newtest",
+  "params" : [ ]
+}

@@ -1,0 +1,15 @@
+{
+  "id" : "newtest_user_prefs",
+  "createdAt" : "2020-09-18T16:32:57.728Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "newtest_user_prefs",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/user_prefs.zip"
+  },
+  "type" : "USER_PREFS",
+  "relatedCollectionId" : "newtest",
+  "metadata" : { }
+}

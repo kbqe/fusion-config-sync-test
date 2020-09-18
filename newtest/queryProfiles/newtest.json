@@ -1,0 +1,6 @@
+{
+  "id" : "newtest",
+  "queryPipeline" : "newtest",
+  "searchHandler" : "/select",
+  "collection" : "newtest"
+}
