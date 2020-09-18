@@ -1,9 +1,9 @@
 {
   "realmType" : "jwt",
-  "id" : "e853c6d1-6cd6-4401-84fa-af0289c003a9",
+  "id" : "a9bb60ff-73fd-42a1-a14f-c5dfe6940229",
   "name" : "webapps-jwt-realm",
   "enabled" : true,
-  "createdAt" : "2020-08-17T10:59:30Z",
+  "createdAt" : "2020-09-18T12:06:02Z",
   "roleNames" : [ "webapps-role" ],
   "config" : {
     "autoCreateUsers" : false,

@@ -1,0 +1,12 @@
+{
+  "id" : "_system",
+  "stages" : [ {
+    "type" : "solr-query",
+    "id" : "46c70b42-2b1a-40f4-85f9-fe161667b3d4",
+    "httpMethod" : "POST",
+    "allowFederatedSearch" : false,
+    "skip" : false,
+    "responseSignalsEnabled" : true
+  } ],
+  "properties" : { }
+}

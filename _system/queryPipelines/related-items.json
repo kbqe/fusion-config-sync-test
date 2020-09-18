@@ -1,0 +1,22 @@
+{
+  "id" : "related-items",
+  "stages" : [ {
+    "type" : "more-like-this",
+    "id" : "967ed09c-5509-4f6b-8018-64e67d189425",
+    "moreLikeThisFields" : [ ],
+    "useQueryParser" : true,
+    "mindf" : 2,
+    "maxdf" : 10000,
+    "minwl" : 3,
+    "docId" : "id",
+    "skip" : false
+  }, {
+    "type" : "solr-query",
+    "id" : "88a7f3d2-7d11-4f90-bcad-829842ea6ed5",
+    "httpMethod" : "POST",
+    "allowFederatedSearch" : false,
+    "skip" : false,
+    "responseSignalsEnabled" : true
+  } ],
+  "properties" : { }
+}

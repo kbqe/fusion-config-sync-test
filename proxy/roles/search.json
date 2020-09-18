@@ -1,7 +1,7 @@
 {
-  "id" : "948a98b8-bb30-4ec8-8723-11f114435cb3",
+  "id" : "f4d716d9-a837-49ff-8bac-53f0cdee7eb9",
   "name" : "search",
-  "createdAt" : "2020-08-17T10:59:29Z",
+  "createdAt" : "2020-09-18T12:06:01Z",
   "desc" : "Provides read-only query and write-only signal API access to the all Fusion apps.",
   "permissions" : [ {
     "methods" : [ "POST" ],
