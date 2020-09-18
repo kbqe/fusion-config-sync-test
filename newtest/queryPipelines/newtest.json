@@ -1,6 +1,7 @@
 {
   "id" : "newtest",
   "stages" : [ {
+    "type" : "text-tagger",
     "id" : "1f1f5cfb-157f-45a4-8c52-a76fe0bf1267",
     "paramToTag" : "q",
     "spell_corrections_enabled" : true,
@@ -13,9 +14,9 @@
     "overlaps" : "ALL",
     "params" : [ ],
     "maxWaitMs" : 500,
-    "type" : "text-tagger",
     "skip" : false
   }, {
+    "type" : "recommendation",
     "id" : "17ef07ca-feab-4b6d-9c7b-ea5b1320394d",
     "numRecommendations" : 10,
     "numSignals" : 100,
@@ -66,49 +67,43 @@
     "rollupWeightStrategy" : "max",
     "queryParamToBoost" : "q",
     "includeEnrichedQuery" : false,
-    "type" : "recommendation",
     "skip" : false
   }, {
+    "type" : "search-fields",
     "id" : "b8d16f0e-0bc7-4278-82c9-15b9f9706e5d",
     "rows" : 10,
     "start" : 0,
-    "sortOrder" : [ ],
     "queryFields" : [ ],
-    "returnFields" : [ "*" ],
-    "returnScore" : true,
-    "type" : "search-fields",
+    "returnFields" : [ "*", "score" ],
     "skip" : false
   }, {
+    "type" : "facet",
     "id" : "0967b9e3-bd6a-488f-8440-7a8e3809878d",
     "fieldFacets" : [ ],
-    "rangeFacets" : [ ],
-    "type" : "facet",
     "skip" : false
   }, {
+    "type" : "query-rules",
     "id" : "aa30d0ff-8db2-4b99-8421-a98a92b96f38",
     "useOriginalQueryIfNoRulesMatch" : true,
     "matchPartialFilterQueries" : true,
     "handler" : "select",
     "method" : "POST",
-    "ruleLimit" : "100",
     "params" : [ ],
     "hierarchicalFilter" : [ ],
     "headers" : [ ],
     "maxWaitMs" : 500,
-    "type" : "query-rules",
     "skip" : false
   }, {
+    "type" : "solr-query",
     "id" : "47c76da4-c196-4b78-8f5a-3c55b4ac5825",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
-    "preferredReplicaType" : "pull",
-    "type" : "solr-query",
     "skip" : false,
     "responseSignalsEnabled" : true
   }, {
+    "type" : "query-rules-augment-response",
     "id" : "4514c44a-e0fd-4f7f-9640-f6fa8413e2d7",
     "facetLabelParseDelimiter" : "||",
-    "type" : "query-rules-augment-response",
     "skip" : false
   } ],
   "properties" : { }

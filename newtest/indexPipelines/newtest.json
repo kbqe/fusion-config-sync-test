@@ -1,28 +1,26 @@
 {
   "id" : "newtest",
   "stages" : [ {
+    "type" : "field-mapping",
     "id" : "45be1c04-fd3e-4244-8ccd-22fa1a54133d",
     "mappings" : [ ],
     "reservedFieldsMappingAllowed" : false,
-    "type" : "field-mapping",
     "skip" : false
   }, {
+    "type" : "solr-dynamic-field-name-mapping",
     "id" : "c8a1bc20-1f10-4aca-bd8e-cba1b3cfbe24",
     "duplicateSingleValuedFields" : false,
     "fieldsToExclude" : [ ],
     "advancedTextFieldsIndexing" : true,
     "maxTextLengthForAdvancedIndexing" : 100,
-    "type" : "solr-dynamic-field-name-mapping",
     "skip" : false
   }, {
+    "type" : "solr-index",
     "id" : "b0407b3b-76a5-4444-81f5-58b7086aff59",
     "enforceSchema" : true,
-    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : false,
-    "allowBlacklistedRequestParameters" : false,
-    "type" : "solr-index",
     "skip" : false
   } ],
   "properties" : { }

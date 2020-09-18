@@ -3,6 +3,7 @@
   "createdAt" : "2020-09-18T16:32:57.739Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : { },
   "solrParams" : {
     "name" : "newtest_job_reports",
     "numShards" : 1,
