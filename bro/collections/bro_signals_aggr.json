@@ -1,0 +1,19 @@
+{
+  "id" : "bro_signals_aggr",
+  "createdAt" : "2020-09-18T12:41:11.265Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "solrParams" : {
+    "name" : "bro_signals_aggr",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "SIGNALS_AGGREGATION",
+  "relatedCollectionId" : "bro",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-18T12:41:17.055Z"
+  } ]
+}

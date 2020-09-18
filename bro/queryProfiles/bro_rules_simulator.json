@@ -1,0 +1,27 @@
+{
+  "id" : "bro_rules_simulator",
+  "queryPipeline" : "bro",
+  "searchHandler" : "/select",
+  "collection" : "bro",
+  "params" : [ {
+    "key" : "lw.rules.simulate",
+    "value" : "bro_query_rewrite_staging",
+    "policy" : "default"
+  }, {
+    "key" : "lw.rules.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.tagger.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.skip_response_signal",
+    "value" : "1",
+    "policy" : "default"
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-18T12:40:56.507Z"
+  } ]
+}

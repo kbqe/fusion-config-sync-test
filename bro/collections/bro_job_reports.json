@@ -1,0 +1,14 @@
+{
+  "id" : "bro_job_reports",
+  "createdAt" : "2020-09-18T12:40:50.739Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "bro_job_reports",
+    "numShards" : 1,
+    "replicationFactor" : 1
+  },
+  "type" : "JOB_REPORTS",
+  "relatedCollectionId" : "bro",
+  "metadata" : { }
+}

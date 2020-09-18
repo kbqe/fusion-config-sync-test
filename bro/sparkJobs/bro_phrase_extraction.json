@@ -1,0 +1,23 @@
+{
+  "id" : "bro_phrase_extraction",
+  "sourceFields" : "query",
+  "trainingDataSamplingFraction" : 1.0,
+  "minmatch" : 100,
+  "trainingDataFilterQuery" : "*:*",
+  "dataFormat" : "solr",
+  "enableAutoPublish" : false,
+  "type" : "sip",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-18T12:41:07.082Z"
+  } ],
+  "outputCollection" : "bro_query_rewrite_staging",
+  "sparkPartitions" : 200,
+  "randomSeed" : 8180,
+  "fieldToVectorize" : "query",
+  "ngramSize" : 3,
+  "trainingCollection" : "bro_signals",
+  "attachPhrases" : false,
+  "analyzerConfig" : "{ \"analyzers\": [{ \"name\": \"StdTokLowerStop\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"standard\" },\"filters\": [{ \"type\": \"lowercase\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"StdTokLowerStop\" } ]}",
+  "overwriteOutput" : true
+}

@@ -1,0 +1,16 @@
+{
+  "id" : "bro_user_prefs",
+  "createdAt" : "2020-09-18T12:40:50.738Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "bro_user_prefs",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/user_prefs.zip"
+  },
+  "type" : "USER_PREFS",
+  "relatedCollectionId" : "bro",
+  "metadata" : { }
+}

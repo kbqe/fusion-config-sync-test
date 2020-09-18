@@ -1,0 +1,13 @@
+{
+  "id" : "bro",
+  "createdAt" : "2020-09-18T12:40:50.732Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "bro",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { }
+}

@@ -1,0 +1,15 @@
+{
+  "id" : "bro_query_rewrite_staging",
+  "createdAt" : "2020-09-18T12:40:50.739Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "bro_query_rewrite_staging",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/query_rewrite.zip"
+  },
+  "type" : "QUERY_REWRITE",
+  "relatedCollectionId" : "bro",
+  "metadata" : { }
+}

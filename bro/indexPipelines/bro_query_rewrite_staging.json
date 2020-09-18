@@ -1,0 +1,19 @@
+{
+  "id" : "bro_query_rewrite_staging",
+  "stages" : [ {
+    "id" : "cec95f84-0d5c-4adc-91c9-56e7590dce5b",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-18T12:40:53.615Z"
+  } ],
+  "properties" : { }
+}
