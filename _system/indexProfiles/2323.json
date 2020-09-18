@@ -1,0 +1,11 @@
+{
+  "id" : "2323",
+  "indexPipeline" : "2323",
+  "collection" : "2323",
+  "parser" : "2323",
+  "params" : [ ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-18T14:02:33.199Z"
+  } ]
+}
