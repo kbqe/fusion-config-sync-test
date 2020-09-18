@@ -3,6 +3,7 @@
   "createdAt" : "2020-09-18T12:41:03.418Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
+  "features" : { },
   "solrParams" : {
     "name" : "bro_signals",
     "numShards" : 2,

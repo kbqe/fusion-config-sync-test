@@ -3,6 +3,20 @@
   "createdAt" : "2020-09-18T12:40:50.732Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "bro",
+      "params" : { },
+      "enabled" : true
+    },
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "bro",
+      "params" : { },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "bro",
     "numShards" : 2,
