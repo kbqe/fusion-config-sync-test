@@ -1,14 +1,12 @@
 {
   "id" : "rc2_query_rewrite_staging",
   "stages" : [ {
+    "type" : "solr-index",
     "id" : "6f72053a-1051-4cfb-b882-251cf0cd86ab",
     "enforceSchema" : true,
-    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : false,
-    "allowBlacklistedRequestParameters" : false,
-    "type" : "solr-index",
     "skip" : false
   } ],
   "properties" : { }

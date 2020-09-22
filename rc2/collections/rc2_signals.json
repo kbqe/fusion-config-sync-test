@@ -3,6 +3,7 @@
   "createdAt" : "2020-09-22T11:47:30.322Z",
   "searchClusterId" : "default",
   "commitWithin" : 10,
+  "features" : { },
   "solrParams" : {
     "name" : "rc2_signals",
     "numShards" : 2,

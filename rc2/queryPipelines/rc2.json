@@ -1,6 +1,7 @@
 {
   "id" : "rc2",
   "stages" : [ {
+    "type" : "text-tagger",
     "id" : "ed3c6424-fe54-44f6-862e-b6309e2a016b",
     "paramToTag" : "q",
     "spell_corrections_enabled" : true,
@@ -13,9 +14,9 @@
     "overlaps" : "ALL",
     "params" : [ ],
     "maxWaitMs" : 500,
-    "type" : "text-tagger",
     "skip" : false
   }, {
+    "type" : "recommendation",
     "id" : "51385616-ec18-4fd4-9a35-2d00da475ba7",
     "numRecommendations" : 10,
     "numSignals" : 100,
@@ -66,49 +67,43 @@
     "rollupWeightStrategy" : "max",
     "queryParamToBoost" : "q",
     "includeEnrichedQuery" : false,
-    "type" : "recommendation",
     "skip" : false
   }, {
+    "type" : "search-fields",
     "id" : "b3f518a8-13a5-49ba-a81f-52600625acb1",
     "rows" : 10,
     "start" : 0,
-    "sortOrder" : [ ],
     "queryFields" : [ ],
-    "returnFields" : [ "*" ],
-    "returnScore" : true,
-    "type" : "search-fields",
+    "returnFields" : [ "*", "score" ],
     "skip" : false
   }, {
+    "type" : "facet",
     "id" : "194c2058-7b07-43b5-9416-ba57710d824b",
     "fieldFacets" : [ ],
-    "rangeFacets" : [ ],
-    "type" : "facet",
     "skip" : false
   }, {
+    "type" : "query-rules",
     "id" : "f0360489-a0b3-44fd-9524-942a2d21f992",
     "useOriginalQueryIfNoRulesMatch" : true,
     "matchPartialFilterQueries" : true,
     "handler" : "select",
     "method" : "POST",
-    "ruleLimit" : "100",
     "params" : [ ],
     "hierarchicalFilter" : [ ],
     "headers" : [ ],
     "maxWaitMs" : 500,
-    "type" : "query-rules",
     "skip" : false
   }, {
+    "type" : "solr-query",
     "id" : "04b2fa18-7935-4d42-9568-ed88279914cf",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
-    "preferredReplicaType" : "pull",
-    "type" : "solr-query",
     "skip" : false,
     "responseSignalsEnabled" : true
   }, {
+    "type" : "query-rules-augment-response",
     "id" : "dd073c5d-0ca4-4281-b529-8d5b4bdd04d3",
     "facetLabelParseDelimiter" : "||",
-    "type" : "query-rules-augment-response",
     "skip" : false
   } ],
   "properties" : { }

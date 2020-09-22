@@ -3,6 +3,7 @@
   "createdAt" : "2020-09-22T11:47:24.697Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : { },
   "solrParams" : {
     "name" : "rc2_query_rewrite_staging",
     "numShards" : 1,
