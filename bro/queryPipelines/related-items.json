@@ -2,7 +2,7 @@
   "id" : "related-items",
   "stages" : [ {
     "type" : "more-like-this",
-    "id" : "a80ea9d5-fc47-48bf-8ea3-2733b96c84bb",
+    "id" : "34132843-5205-4e88-902d-c089920932da",
     "moreLikeThisFields" : [ ],
     "useQueryParser" : true,
     "mindf" : 2,
@@ -12,7 +12,7 @@
     "skip" : false
   }, {
     "type" : "solr-query",
-    "id" : "e89a2e44-62ee-4ee0-8417-667000565087",
+    "id" : "7169f9b3-642e-4af3-b156-9d58dd06dad7",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
     "skip" : false,

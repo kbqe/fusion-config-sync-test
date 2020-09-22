@@ -1,7 +1,7 @@
 {
-  "id" : "655a78da-867c-4e5c-a283-0f9e46cb2980",
+  "id" : "4fdd7b90-c55e-40bc-8240-895db01aa3d9",
   "name" : "search-template",
-  "createdAt" : "2020-09-18T15:28:17Z",
+  "createdAt" : "2020-09-22T11:32:25Z",
   "desc" : "Search role template for a particular app. Copy and replace app-name with your Fusion app",
   "permissions" : [ {
     "methods" : [ "POST", "GET" ],
