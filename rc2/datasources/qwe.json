@@ -1,0 +1,14 @@
+{
+  "id" : "qwe",
+  "created" : "2020-09-22T11:48:27.263Z",
+  "modified" : "2020-09-22T11:48:27.263Z",
+  "connector" : "lucid.fileupload",
+  "type" : "fileupload",
+  "pipeline" : "rc2",
+  "parserId" : "rc2",
+  "properties" : {
+    "mediaType" : "application/octet-stream",
+    "collection" : "rc2",
+    "fileId" : "realestate.csv"
+  }
+}
