@@ -1,0 +1,16 @@
+{
+  "id" : "rc2_query_rewrite",
+  "createdAt" : "2020-09-22T11:47:24.689Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "rc2_query_rewrite",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/query_rewrite.zip"
+  },
+  "type" : "QUERY_REWRITE",
+  "relatedCollectionId" : "rc2",
+  "metadata" : { }
+}

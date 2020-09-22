@@ -1,0 +1,7 @@
+{
+  "id" : "rc2",
+  "parser" : "rc2",
+  "indexPipeline" : "rc2",
+  "collection" : "rc2",
+  "params" : [ ]
+}

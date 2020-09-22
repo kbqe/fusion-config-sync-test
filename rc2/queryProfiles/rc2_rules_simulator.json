@@ -1,0 +1,23 @@
+{
+  "id" : "rc2_rules_simulator",
+  "queryPipeline" : "rc2",
+  "searchHandler" : "/select",
+  "collection" : "rc2",
+  "params" : [ {
+    "key" : "lw.rules.simulate",
+    "value" : "rc2_query_rewrite_staging",
+    "policy" : "default"
+  }, {
+    "key" : "lw.rules.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.tagger.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.skip_response_signal",
+    "value" : "1",
+    "policy" : "default"
+  } ]
+}

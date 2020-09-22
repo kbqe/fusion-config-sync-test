@@ -1,0 +1,15 @@
+{
+  "id" : "rc2_signals_aggr",
+  "createdAt" : "2020-09-22T11:47:36.475Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "solrParams" : {
+    "name" : "rc2_signals_aggr",
+    "numShards" : 1,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 1
+  },
+  "type" : "SIGNALS_AGGREGATION",
+  "relatedCollectionId" : "rc2",
+  "metadata" : { }
+}

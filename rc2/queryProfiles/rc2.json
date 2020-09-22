@@ -1,0 +1,6 @@
+{
+  "id" : "rc2",
+  "queryPipeline" : "rc2",
+  "searchHandler" : "/select",
+  "collection" : "rc2"
+}

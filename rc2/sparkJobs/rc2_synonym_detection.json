@@ -1,0 +1,23 @@
+{
+  "id" : "rc2_synonym_detection",
+  "docIdField" : "doc_id_s",
+  "trainingDataSamplingFraction" : 1.0,
+  "trainingDataFilterQuery" : "*:*",
+  "dataFormat" : "solr",
+  "analyzerConfigQuery" : "{ \"analyzers\": [ { \"name\": \"LetterTokLowerStem\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"letter\" },\"filters\": [{ \"type\": \"lowercase\" },{ \"type\": \"KStem\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"LetterTokLowerStem\" } ]}",
+  "keyPhraseFilterQuery" : "type:phrase",
+  "similarityThreshold" : 0.01,
+  "countField" : "aggr_count_i",
+  "enableAutoPublish" : false,
+  "type" : "synonymDetection",
+  "outputCollection" : "rc2_query_rewrite_staging",
+  "overlapThreshold" : 0.5,
+  "fieldToVectorize" : "query_s",
+  "randomSeed" : 1234,
+  "minQueryCount" : 5,
+  "trainingCollection" : "rc2_signals_aggr",
+  "keyPhraseCollection" : "rc2_query_rewrite_staging",
+  "misspellingsFilterQuery" : "type:spell",
+  "misspellingCollection" : "rc2_query_rewrite_staging",
+  "overwriteOutput" : true
+}

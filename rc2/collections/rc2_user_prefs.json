@@ -1,0 +1,15 @@
+{
+  "id" : "rc2_user_prefs",
+  "createdAt" : "2020-09-22T11:47:24.666Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "rc2_user_prefs",
+    "numShards" : 1,
+    "replicationFactor" : 1,
+    "configTemplate" : "solr/conf/user_prefs.zip"
+  },
+  "type" : "USER_PREFS",
+  "relatedCollectionId" : "rc2",
+  "metadata" : { }
+}

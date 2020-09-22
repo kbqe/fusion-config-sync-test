@@ -1,0 +1,13 @@
+{
+  "id" : "rc2",
+  "createdAt" : "2020-09-22T11:47:24.627Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "rc2",
+    "numShards" : 2,
+    "replicationFactor" : 1
+  },
+  "type" : "DATA",
+  "metadata" : { }
+}
