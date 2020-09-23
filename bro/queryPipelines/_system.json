@@ -1,10 +1,11 @@
 {
   "id" : "_system",
   "stages" : [ {
-    "type" : "solr-query",
-    "id" : "ad74581a-53da-4429-b147-6d0f6566ef0f",
+    "id" : "d7d515a4-13d9-436c-92a2-dc239957885c",
     "httpMethod" : "POST",
     "allowFederatedSearch" : false,
+    "preferredReplicaType" : "pull",
+    "type" : "solr-query",
     "skip" : false,
     "responseSignalsEnabled" : true
   } ],

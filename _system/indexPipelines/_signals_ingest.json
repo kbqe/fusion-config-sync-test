@@ -1,15 +1,14 @@
 {
   "id" : "_signals_ingest",
   "stages" : [ {
-    "type" : "signal-formatter",
     "id" : "ingest-signals",
     "flatten" : true,
     "allowedTypes" : [ ],
     "undefinedType" : "general",
     "timestampLocale" : "en-US",
+    "type" : "signal-formatter",
     "skip" : false
   }, {
-    "type" : "field-mapping",
     "id" : "mapping-signals",
     "mappings" : [ {
       "source" : "params.timestamp",
@@ -461,23 +460,25 @@
       "operation" : "move"
     } ],
     "reservedFieldsMappingAllowed" : false,
+    "type" : "field-mapping",
     "skip" : false
   }, {
-    "type" : "geoip-lookup",
     "id" : "geo-lookup",
     "ipAddrField" : "ip_address",
     "hostnameField" : "host",
+    "type" : "geoip-lookup",
     "skip" : false
   }, {
-    "type" : "solr-index",
     "id" : "solr-system",
     "enforceSchema" : true,
+    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
     "skip" : false
   }, {
-    "type" : "update-existing-doc",
     "id" : "update-has_clicks-on-request",
     "realTimeGetQuery" : "id:${request_id_s} AND has_clicks:false",
     "lookupQuery" : "+query_id:\"${query_id}\" +type:request +has_clicks:false",
@@ -489,6 +490,7 @@
     } ],
     "idField" : "id",
     "secsToCacheRecentlyUpdatedDocs" : 120,
+    "type" : "update-existing-doc",
     "skip" : false,
     "label" : "Update has_clicks flag"
   } ],

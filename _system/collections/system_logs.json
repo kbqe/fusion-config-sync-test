@@ -1,6 +1,6 @@
 {
   "id" : "system_logs",
-  "createdAt" : "2020-09-22T11:32:14.582Z",
+  "createdAt" : "2020-09-23T12:45:04.405Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
   "features" : { },
@@ -8,7 +8,7 @@
     "name" : "system_logs",
     "numShards" : 1,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 1,
+    "maxShardsPerNode" : -1,
     "policy" : "fusion"
   },
   "type" : "LOGS",

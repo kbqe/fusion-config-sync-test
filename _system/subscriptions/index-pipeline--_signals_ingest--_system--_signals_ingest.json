@@ -3,5 +3,7 @@
   "topic" : "_system/_signals_ingest",
   "numberOfListenerThreads" : 10,
   "maxRetries" : 5,
+  "initialPosition" : "earliest",
+  "contextProperties" : { },
   "id" : "index-pipeline--_signals_ingest--_system--_signals_ingest"
 }

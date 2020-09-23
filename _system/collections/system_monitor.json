@@ -1,6 +1,6 @@
 {
   "id" : "system_monitor",
-  "createdAt" : "2020-09-22T11:32:42.438Z",
+  "createdAt" : "2020-09-23T12:44:57.473Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
   "features" : { },
@@ -8,7 +8,7 @@
     "name" : "system_monitor",
     "numShards" : 1,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 1
+    "maxShardsPerNode" : -1
   },
   "type" : "METRICS",
   "metadata" : { }

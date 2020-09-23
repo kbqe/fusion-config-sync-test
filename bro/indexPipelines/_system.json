@@ -1,12 +1,14 @@
 {
   "id" : "_system",
   "stages" : [ {
-    "type" : "solr-index",
     "id" : "solr-system",
     "enforceSchema" : true,
+    "fieldsList" : false,
     "dateFormats" : [ ],
     "params" : [ ],
     "bufferDocsForSolr" : true,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
     "skip" : false
   } ],
   "properties" : { }

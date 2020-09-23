@@ -1,6 +1,7 @@
 {
   "id" : "solr-update-parser",
   "enableMediaTypeDetection" : true,
+  "detectMediaTypeBasedOnExtension" : true,
   "maxParserDepth" : 16,
   "maxFieldLength" : -1,
   "parserStages" : [ {
@@ -9,7 +10,7 @@
     "mediaTypes" : [ ],
     "pathPatterns" : [ ],
     "errorHandling" : "mark",
-    "id" : "f8fe9b31-9e15-41e6-a5e6-15668b96b9b5",
+    "id" : "ea9f389f-8642-4455-a3ca-ebb2f7e13767",
     "enableXml" : true,
     "enableJson" : true,
     "enableCsv" : true,

@@ -1,10 +1,10 @@
 {
-  "id" : "6aff7337-5343-45c4-9ea8-3a3fc764d701",
+  "id" : "86ee729e-1e35-496c-ad54-cbc46386f16b",
   "name" : "admin",
-  "createdAt" : "2020-09-22T11:32:25Z",
+  "createdAt" : "2020-09-23T12:44:34Z",
   "desc" : "Full access to every service. This is the super-admin role.",
   "permissions" : [ {
-    "methods" : [ "DELETE", "POST", "HEAD", "PUT", "GET", "PATCH" ],
+    "methods" : [ "GET", "POST", "HEAD", "DELETE", "PUT", "PATCH" ],
     "path" : "/**",
     "params" : { }
   } ],

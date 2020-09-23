@@ -1,6 +1,6 @@
 {
   "id" : "system_jobs_history",
-  "createdAt" : "2020-09-22T11:32:15.026Z",
+  "createdAt" : "2020-09-23T12:45:04.491Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
   "features" : { },
@@ -8,7 +8,7 @@
     "name" : "system_jobs_history",
     "numShards" : 1,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 1
+    "maxShardsPerNode" : -1
   },
   "type" : "JOB_HISTORY",
   "metadata" : { }

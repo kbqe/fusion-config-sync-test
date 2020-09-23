@@ -1,6 +1,6 @@
 {
   "id" : "system_blobs",
-  "createdAt" : "2020-09-22T11:32:23.121Z",
+  "createdAt" : "2020-09-23T12:45:10.822Z",
   "searchClusterId" : "default",
   "commitWithin" : -1,
   "features" : { },
@@ -8,7 +8,7 @@
     "name" : "system_blobs",
     "numShards" : 1,
     "replicationFactor" : 2,
-    "maxShardsPerNode" : 1
+    "maxShardsPerNode" : -1
   },
   "type" : "BLOBS",
   "metadata" : { }
