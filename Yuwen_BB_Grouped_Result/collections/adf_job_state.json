@@ -3,6 +3,7 @@
   "createdAt" : "2020-03-06T18:39:51.553Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : { },
   "solrParams" : {
     "name" : "adf_job_state",
     "numShards" : 1,

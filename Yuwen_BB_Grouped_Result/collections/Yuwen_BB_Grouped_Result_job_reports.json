@@ -3,6 +3,7 @@
   "createdAt" : "2020-03-05T19:04:20.944Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : { },
   "solrParams" : {
     "name" : "Yuwen_BB_Grouped_Result_job_reports",
     "numShards" : 1,
