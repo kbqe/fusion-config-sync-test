@@ -1,0 +1,12 @@
+{
+  "app" : "Yuwen_BB_Grouped_Result",
+  "id" : "4a46e50d-7fd8-45c6-9a8e-4d0bbfdfa368",
+  "name" : "ahahahah100",
+  "all" : false,
+  "priority" : 0,
+  "active" : true,
+  "type" : "landing",
+  "metadata" : {
+    "type" : "landing"
+  }
+}
