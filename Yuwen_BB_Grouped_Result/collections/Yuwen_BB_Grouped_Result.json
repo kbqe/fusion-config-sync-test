@@ -3,6 +3,33 @@
   "createdAt" : "2020-03-05T19:04:20.903Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : {
+    "signals" : {
+      "name" : "signals",
+      "collectionId" : "Yuwen_BB_Grouped_Result",
+      "params" : { },
+      "enabled" : true
+    },
+    "searchLogs" : {
+      "name" : "searchLogs",
+      "collectionId" : "Yuwen_BB_Grouped_Result",
+      "params" : { },
+      "enabled" : true
+    },
+    "recommendations" : {
+      "name" : "recommendations",
+      "collectionId" : "Yuwen_BB_Grouped_Result",
+      "params" : {
+        "idField" : "id",
+        "itemsForItem" : true,
+        "queriesForQuery" : false,
+        "itemsForUser" : true,
+        "itemsForQuery" : false,
+        "content" : true
+      },
+      "enabled" : true
+    }
+  },
   "solrParams" : {
     "name" : "Yuwen_BB_Grouped_Result",
     "numShards" : 2,
