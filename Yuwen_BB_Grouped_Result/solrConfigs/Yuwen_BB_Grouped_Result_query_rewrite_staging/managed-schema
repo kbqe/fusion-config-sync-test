@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Solr managed schema - automatically generated - DO NOT EDIT -->
+<schema name="query-augmentation-schema" version="1.6">
+  <uniqueKey>id</uniqueKey>
+  <fieldType name="binary" class="solr.BinaryField"/>
+  <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+  <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
+  <fieldType name="date_range" class="solr.DateRangeField"/>
+  <fieldType name="filters_shingle" class="solr.TextField" enableGraphQueries="false">
+    <analyzer type="index">
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[ -]" replacement=""/>
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern=":[1234567]?/" replacement="/"/>
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[ -]" replacement=""/>
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern=":[1234567]?/" replacement="/"/>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.ShingleFilterFactory" minShingleSize="2" outputUnigrams="false" outputUnigramsIfNoShingles="false" maxShingleSize="6" tokenSeparator="/"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
+  <fieldType name="pdates" class="solr.DatePointField" docValues="true" multiValued="true"/>
+  <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+  <fieldType name="pdoubles" class="solr.DoublePointField" docValues="true" multiValued="true"/>
+  <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
+  <fieldType name="pfloats" class="solr.FloatPointField" docValues="true" multiValued="true"/>
+  <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+  <fieldType name="pints" class="solr.IntPointField" docValues="true" multiValued="true"/>
+  <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+  <fieldType name="plongs" class="solr.LongPointField" docValues="true" multiValued="true"/>
+  <fieldType name="random" class="solr.RandomSortField" indexed="true"/>
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true"/>
+  <fieldType name="strings" class="solr.StrField" sortMissingLast="true" docValues="true" multiValued="true"/>
+  <fieldType name="tagger" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true" postingsFormat="FST50">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.EnglishPossessiveFilterFactory"/>
+      <filter class="solr.ASCIIFoldingFilterFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.ConcatenateGraphFilterFactory" preservePositionIncrements="false"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.EnglishPossessiveFilterFactory"/>
+      <filter class="solr.ASCIIFoldingFilterFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="tags_text" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.SynonymFilterFactory" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.SynonymGraphFilterFactory" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="text_keywords" class="solr.TextField">
+    <analyzer type="index">
+      <tokenizer class="solr.PatternTokenizerFactory" pattern="," group="-1"/>
+      <filter class="solr.TrimFilterFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.TrimFilterFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="text_ngram" class="solr.TextField">
+    <analyzer type="index">
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.NGramFilterFactory" maxGramSize="20" minGramSize="3" keepShortTerm="true"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="text_shingle" class="solr.TextField" enableGraphQueries="false">
+    <analyzer type="index">
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="&amp;" replacement="ampersand"/>
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.TrimFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="&amp;" replacement="ampersand"/>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.ShingleFilterFactory" maxShingleSize="6"/>
+      <filter class="solr.TrimFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <field name="_raw_content_" type="binary" multiValued="false" indexed="false" required="false" stored="true"/>
+  <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
+  <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
+  <field name="_version_" type="plong" indexed="false" stored="false"/>
+  <field name="action" type="string" indexed="true" stored="true"/>
+  <field name="attributepath" type="strings"/>
+  <field name="boost" type="pdouble" indexed="true" stored="true"/>
+  <field name="boost_conditions" type="text_general" multiValued="true" stored="true"/>
+  <field name="boost_param" type="string"/>
+  <field name="boost_query" type="string"/>
+  <field name="boost_val" type="pfloat" stored="true"/>
+  <field name="confidence" type="pdouble" indexed="true" stored="true"/>
+  <field name="cor_count" type="plong" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="count" type="pint" indexed="true" stored="true"/>
+  <field name="createdOn" type="pdate" indexed="true" stored="true"/>
+  <field name="custom_type" type="string"/>
+  <field name="deployed" type="boolean" indexed="true" stored="true"/>
+  <field name="description" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="direction" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="display_type" type="string"/>
+  <field name="docId" type="string"/>
+  <field name="doc_type" type="string" indexed="true" stored="true"/>
+  <field name="edit_session_id" type="string" indexed="true" stored="true"/>
+  <field name="effective_range" type="date_range" multiValued="true"/>
+  <field name="enabled" type="boolean"/>
+  <field name="expand" type="strings"/>
+  <field name="facet_data" type="strings"/>
+  <field name="facets_data" type="text_general" multiValued="true" stored="true"/>
+  <field name="field_name" type="string"/>
+  <field name="field_values" type="string" multiValued="true"/>
+  <field name="filters" type="string" multiValued="true"/>
+  <field name="filters_normalized" type="string" multiValued="true"/>
+  <field name="filters_shingle" type="filters_shingle" multiValued="true"/>
+  <field name="groups" type="string"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="ids" type="string" multiValued="true"/>
+  <field name="input" type="string" indexed="true" stored="true"/>
+  <field name="is_deleted" type="boolean" indexed="true" stored="true"/>
+  <field name="keys" type="string" multiValued="true"/>
+  <field name="longname" type="strings"/>
+  <field name="mappings" type="string" indexed="true" stored="true"/>
+  <field name="matched_headNoNum_txt" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="matched_headQuery_txt" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="matching" type="string" indexed="true" stored="true"/>
+  <field name="mis_count" type="plong" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="name" type="string"/>
+  <field name="new_q" type="strings"/>
+  <field name="number_txt_en" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="number_unit_txt_en" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="other_specific_txt" type="string" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="output" type="strings" indexed="true" stored="true"/>
+  <field name="param_keys" type="string" multiValued="true" indexed="true"/>
+  <field name="param_policies" type="string" multiValued="true" indexed="true"/>
+  <field name="param_values" type="string" multiValued="true" indexed="true"/>
+  <field name="phrase_count" type="pint" indexed="true" stored="true"/>
+  <field name="pipeline_id" type="string"/>
+  <field name="popularity" type="pfloat" indexed="true" stored="true"/>
+  <field name="priority" type="plong"/>
+  <field name="query" type="string"/>
+  <field name="query_count" type="pint" indexed="true" stored="true"/>
+  <field name="replace" type="strings"/>
+  <field name="review" type="string" indexed="true" stored="true"/>
+  <field name="reviewedOn" type="pdate" indexed="true" stored="true"/>
+  <field name="reviewer" type="string" indexed="true" stored="true"/>
+  <field name="rollup" type="string"/>
+  <field name="search_terms" type="text_general" multiValued="true" indexed="true" stored="true"/>
+  <field name="search_terms_keywords" type="text_keywords" multiValued="true" indexed="true" stored="false"/>
+  <field name="search_terms_phrase" type="text_shingle" multiValued="true" indexed="true" stored="true"/>
+  <field name="similar_query" type="string"/>
+  <field name="similar_query_count" type="pint" indexed="true" stored="true"/>
+  <field name="similarity" type="pdouble" indexed="true" stored="true"/>
+  <field name="slop" type="pint" indexed="true" stored="true"/>
+  <field name="source" type="string" indexed="true" stored="true"/>
+  <field name="sourceType" type="string" indexed="true" stored="true"/>
+  <field name="surface_form" type="text_general" multiValued="false"/>
+  <field name="syn_context" type="strings" indexed="true" stored="true"/>
+  <field name="syn_synonym" type="strings" indexed="true" stored="true"/>
+  <field name="syn_text" type="text_general" multiValued="true" indexed="true" stored="false"/>
+  <field name="tagger_text" type="tagger" stored="false"/>
+  <field name="tags" type="strings" indexed="true" stored="true"/>
+  <field name="tags_match" type="tags_text" multiValued="true"/>
+  <field name="token_corr_for_phrase_cnt" type="plong" docValues="true" multiValued="false" indexed="true" stored="true"/>
+  <field name="type" type="string" indexed="true" stored="true"/>
+  <field name="updatedOn" type="pdate" indexed="true" stored="true"/>
+  <field name="use_qec" type="boolean"/>
+  <field name="username" type="string"/>
+  <field name="values" type="string" multiValued="true"/>
+  <field name="weight" type="pdouble"/>
+  <field name="word_count" type="pint" indexed="true" stored="true"/>
+  <field name="xid" type="plongs"/>
+  <field name="zone" type="string" multiValued="false"/>
+  <dynamicField name="random_*" type="random"/>
+  <dynamicField name="*_tdt" type="pdate" multiValued="false" indexed="true" required="false" stored="true"/>
+  <dynamicField name="*_str" type="string" indexed="true" stored="true"/>
+  <dynamicField name="*_is" type="pints" indexed="true" stored="true"/>
+  <dynamicField name="*_ss" type="strings" indexed="true" stored="true"/>
+  <dynamicField name="*_ls" type="plongs" indexed="true" stored="true"/>
+  <dynamicField name="*_bs" type="booleans" indexed="true" stored="true"/>
+  <dynamicField name="*_fs" type="pfloats" indexed="true" stored="true"/>
+  <dynamicField name="*_ds" type="pdoubles" indexed="true" stored="true"/>
+  <dynamicField name="*_dt" type="pdate" indexed="true" stored="true"/>
+  <dynamicField name="*_i" type="pint" indexed="true" stored="true"/>
+  <dynamicField name="*_s" type="string" indexed="true" stored="true"/>
+  <dynamicField name="*_l" type="plong" indexed="true" stored="true"/>
+  <dynamicField name="*_b" type="boolean" indexed="true" stored="true"/>
+  <dynamicField name="*_f" type="pfloat" indexed="true" stored="true"/>
+  <dynamicField name="*_d" type="pdouble" indexed="true" stored="true"/>
+  <dynamicField name="*_t" type="text_general" multiValued="false" indexed="true" required="false" stored="true"/>
+  <copyField source="output" dest="syn_text"/>
+  <copyField source="search_terms" dest="search_terms_keywords"/>
+  <copyField source="surface_form" dest="syn_text"/>
+  <copyField source="surface_form" dest="tagger_text"/>
+  <copyField source="syn_context" dest="syn_text"/>
+  <copyField source="tags" dest="tags_match"/>
+  <copyField source="*" dest="_text_"/>
+</schema>
