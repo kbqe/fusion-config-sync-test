@@ -1,0 +1,11 @@
+{
+  "id" : "4baf26d0-08ea-46ba-bb3e-3973704e18ac",
+  "metadata" : {
+    "secondary" : "description",
+    "image" : "image",
+    "primary" : "albumTitle"
+  },
+  "name" : "test",
+  "queryProfile" : "Yuwen_BB_Grouped_Result_rules_simulator",
+  "type" : "result-list"
+}

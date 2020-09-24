@@ -1,0 +1,14 @@
+{
+  "id" : "adf_job_state",
+  "createdAt" : "2020-03-06T18:39:51.553Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "adf_job_state",
+    "numShards" : 1,
+    "replicationFactor" : 1
+  },
+  "type" : "CRAWL_DB",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { }
+}

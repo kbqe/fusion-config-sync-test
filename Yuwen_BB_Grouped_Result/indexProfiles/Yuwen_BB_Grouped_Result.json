@@ -1,0 +1,11 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result",
+  "parser" : "Yuwen_BB_Grouped_Result",
+  "indexPipeline" : "Yuwen_BB_Grouped_Result",
+  "collection" : "Yuwen_BB_Grouped_Result",
+  "params" : [ ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:56.122Z"
+  } ]
+}

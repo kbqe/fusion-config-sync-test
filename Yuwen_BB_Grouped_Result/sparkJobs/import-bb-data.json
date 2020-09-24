@@ -1,0 +1,13 @@
+{
+  "id" : "import-bb-data",
+  "shellOptions" : [ {
+    "key" : "driver-memory",
+    "value" : "5g"
+  } ],
+  "type" : "script",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:59.702Z"
+  } ],
+  "script" : "import com.lucidworks.spark.util.SolrSupport\nimport org.apache.spark.SparkContext\nimport org.apache.spark.sql.{SQLContext, _}\nimport org.apache.spark.sql.functions.{udf, _}\nimport org.apache.spark.sql.types._\n\nval dirPath = \"gs://fusion-ui-bouquet/relevancy-data/\"\n\nval dataInput=spark.read.parquet(dirPath + \"relevancy_signals.parquet\")\ndataInput.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result_signals\").option(\"soft_commit_secs\", \"10\").save\n\nval dataInput2=spark.read.parquet(dirPath + \"relevancy_signals_aggr.parquet\")\ndataInput2.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result_signals_aggr\").option(\"soft_commit_secs\", \"10\").save\n\nval dataInput3=spark.read.parquet(dirPath + \"relevancy.parquet\")\ndataInput3.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result\").option(\"soft_commit_secs\", \"10\").save\n\nval dataInput4=spark.read.parquet(dirPath + \"relevancy_job_reports.parquet\")\ndataInput4.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result_job_reports\").option(\"soft_commit_secs\", \"10\").save\n\nval dataInput5=spark.read.parquet(dirPath + \"relevancy_query_rewrite_staging.parquet\")\ndataInput5.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result_query_rewrite_staging\").option(\"soft_commit_secs\", \"10\").save\n\nval dataInput6=spark.read.parquet(dirPath + \"relevancy_query_rewrite.parquet\")\ndataInput6.write.format(\"solr\").option(\"collection\", \"Yuwen_BB_Grouped_Result_query_rewrite\").option(\"soft_commit_secs\", \"10\").save"
+}

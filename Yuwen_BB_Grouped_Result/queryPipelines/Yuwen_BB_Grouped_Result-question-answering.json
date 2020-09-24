@@ -1,0 +1,79 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result-question-answering",
+  "stages" : [ {
+    "id" : "33d854ad-f3f0-44ca-994b-e05e76eb4f31",
+    "rows" : 10,
+    "start" : 0,
+    "sortOrder" : [ ],
+    "queryFields" : [ ],
+    "returnFields" : [ "*", "compressed_document_vector_s", "document_clusters_is" ],
+    "returnScore" : true,
+    "type" : "search-fields",
+    "skip" : false
+  }, {
+    "id" : "4bd093c1-da76-4d59-8908-ea03fedf099a",
+    "rowsFromSolrToRerank" : 500,
+    "type" : "fusion-reranking",
+    "skip" : false
+  }, {
+    "id" : "8631d398-813d-40b8-a740-308bde5fbf35",
+    "serviceId" : "ml-model-service",
+    "modelId" : "sample-qna-model",
+    "failOnError" : false,
+    "inputScript" : "/* \nModel input construction. \n*/\nvar modelInput = new java.util.HashMap()\nmodelInput.put(\"text\", request.getFirstParam(\"q\"))\nmodelInput.put(\"pipeline\", \"query\")\nmodelInput.put(\"compress\", \"false\")\nmodelInput.put(\"unidecode\", \"true\")\nmodelInput.put(\"lowercase\", \"false\")\n\nmodelInput",
+    "outputScript" : "/*\nDocument clusters Solr field name. If clustering is used then Filter Query is \nconstructed against this field to return all documents that have the same clusters as \nquery. This concept is similar to Inverted File Index (IVF).\n\nNOTE: Only models from the training module support clustering.\n*/\nvar documentClustersField = \"document_clusters_is\"\n\n/*\nVariable `numClusters` specifies how many top clusters should be used for each query.\nThe value should be less or equal to the value in the training configuration. \nBy default it's set to 0 which means that clustering isn't used. If you want to use \nclustering, value 10 is a good choice for most cases. \n*/\nvar numClusters = 0\n\n/*\nModel output parsing.\n*/\nvar queryVector = modelOutput.get(\"vector\").stream().mapToDouble(function(d){return d}).toArray()\ncontext.put(\"query_vector\", queryVector)\n\nif (numClusters > 0 && modelOutput.containsKey(\"clusters\")) {\n    clusters = Java.from(modelOutput.get(\"clusters\").subList(0, numClusters))\n    if (clusters.length > 1) {\n      fq = documentClustersField+\":(\"+clusters.join(' OR ')+\")\"\n    } else {\n      fq = documentClustersField+\":\"+clusters[0]\n    }\n    \n    request.putSingleParam(\"q\", \"*:*\")\n    request.addParam(\"fq\", fq)\n}",
+    "requiredLicensedCapability" : "fusion.ai",
+    "type" : "ml-query",
+    "skip" : false,
+    "label" : "Query Encoding"
+  }, {
+    "id" : "c70f8701-810e-4e45-9321-d1b39ade8170",
+    "inputParam" : "q",
+    "stopWords" : "a,about,actual,actually,am,an,and,answer,any,anyone,anything,anyway,are,ask,asked,asking,at,away,based,basically,be,been,being,btw,by,can,consider,considered,could,did,do,does,doing,done,especially,essentially,etc,feel,find,for,found,from,generally,get,getting,give,given,giving,go,goes,gone,got,guess,had,happen,happened,happening,has,have,having,he,hello,help,hence,her,here,hers,hey,him,his,hope,hoped,however,i,I'd,i'm,'m,'ll,'d,ie,if,im,in,into,is,it,its,just,keeping,kept,knew,know,let,like,likely,list,look,looked,looking,makes,making,maybe,me,mention,mentioned,might,mind,much,my,need,needed,of,off,on,onto,otherwise,our,ours,out,perhaps,please,possible,possibly,pretty,probably,provide,provided,question,quite,rather,really,regard,regarding,relatively,said,saw,say,saying,search,searching,see,seeing,seem,seemed,seeming,seems,seen,select,she,should,show,simply,so,some,somehow,something,specifically,still,such,suggest,suggested,sure,take,taken,taking,tell,thank,thanks,that,the,their,them,then,there,thereby,therefore,therein,these,they,thing,think,thinking,this,those,though,thought,through,throughout,thru,thus,to,too,took,totally,toward,towards,tried,try,trying,up,upon,us,use,used,using,usually,very,via,want,wanted,was,we,went,were,what,will,wish,wished,with,within,wonder,wondering,would,yet,you,your,yours",
+    "type" : "stop-filter-query-stage",
+    "skip" : false
+  }, {
+    "id" : "38345f67-be4d-4ef9-8e9e-49a575172725",
+    "inputParam" : "q",
+    "type" : "query-escaping-query-stage",
+    "skip" : false
+  }, {
+    "id" : "c25624cb-8451-4e81-a626-4f59805c5e77",
+    "httpMethod" : "POST",
+    "allowFederatedSearch" : false,
+    "preferredReplicaType" : "pull",
+    "type" : "solr-query",
+    "skip" : false,
+    "responseSignalsEnabled" : true
+  }, {
+    "id" : "678bcce1-62c7-4ea0-99a8-0625f4d14422",
+    "queryVectorContextKey" : "query_vector",
+    "documentVectorField" : "compressed_document_vector_s",
+    "keepDocumentVectorField" : false,
+    "distanceType" : "cosine_similarity",
+    "documentDistanceResultField" : "vectors_distance",
+    "failOnError" : false,
+    "requiredLicensedCapability" : "fusion.ai.qa",
+    "type" : "per-result-vectors-distance",
+    "skip" : false
+  }, {
+    "id" : "03426bf3-7c21-4391-abcb-bd092204056f",
+    "expression" : "0.3 * score / max_score + 0.7 * vectors_distance",
+    "resultFieldName" : "ensemble_score",
+    "requiredLicensedCapability" : "fusion.ai.qa",
+    "type" : "response-math-expression",
+    "skip" : false
+  }, {
+    "id" : "735378d1-9840-4f89-8fae-94181332335a",
+    "sortField" : "ensemble_score",
+    "sortOrder" : "desc",
+    "failOnError" : false,
+    "type" : "result-doc-field-sorting",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:52.481Z"
+  } ],
+  "properties" : { }
+}

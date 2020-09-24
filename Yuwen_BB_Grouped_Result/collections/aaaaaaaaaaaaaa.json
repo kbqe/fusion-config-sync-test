@@ -1,0 +1,14 @@
+{
+  "id" : "aaaaaaaaaaaaaa",
+  "createdAt" : "2020-03-06T18:40:18.894Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "aaaaaaaaaaaaaa",
+    "numShards" : 1,
+    "replicationFactor" : 1
+  },
+  "type" : "ACL",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { }
+}

@@ -1,0 +1,144 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_items_for_item_recommendations",
+  "stages" : [ {
+    "id" : "item-rec",
+    "numRecommendations" : 10,
+    "modelID" : "Yuwen_BB_Grouped_Result_recommender",
+    "collection" : "Yuwen_BB_Grouped_Result_items_for_item_recommendations",
+    "itemIdParam" : "item_id",
+    "resultsLocation" : "As Boosts",
+    "itemIdField" : "itemId",
+    "otherItemIdField" : "otherItemId",
+    "similarityScoreField" : "sim",
+    "modelIdField" : "modelId",
+    "scaleRange" : {
+      "scaleMin" : 5.0,
+      "scaleMax" : 15.0
+    },
+    "foldInUpdates" : true,
+    "boostingMethod" : "query-param",
+    "boostingParam" : "boost",
+    "boostFieldName" : "id",
+    "type" : "item-recommendation",
+    "skip" : true
+  }, {
+    "id" : "cb302b8a-e93a-46d4-9f3a-22e793384205",
+    "paramToTag" : "q",
+    "spell_corrections_enabled" : true,
+    "phrase_boosting_enabled" : true,
+    "tail_rewrites_enabled" : true,
+    "phraseBoost" : 2.0,
+    "phraseSlop" : 10,
+    "synonymExpansionBoost" : 2.0,
+    "synonym_expansion_enabled" : true,
+    "overlaps" : "LONGEST_DOMINANT_RIGHT",
+    "params" : [ ],
+    "maxWaitMs" : 500,
+    "type" : "text-tagger",
+    "skip" : true
+  }, {
+    "id" : "62716dcd-94e6-4735-a321-532116391633",
+    "numRecommendations" : 10,
+    "numSignals" : 100,
+    "aggrType" : "click@doc_id,filters,query",
+    "boostId" : "id",
+    "boostingMethod" : "query-param",
+    "boostingParam" : "boost",
+    "scaleRange" : {
+      "scaleMin" : 1.1,
+      "scaleMax" : 5.0
+    },
+    "queryParams" : [ {
+      "key" : "qf",
+      "value" : "query_t"
+    }, {
+      "key" : "pf",
+      "value" : "query_t^50"
+    }, {
+      "key" : "pf",
+      "value" : "query_t~3^20"
+    }, {
+      "key" : "pf2",
+      "value" : "query_t^20"
+    }, {
+      "key" : "pf2",
+      "value" : "query_t~3^10"
+    }, {
+      "key" : "pf3",
+      "value" : "query_t^10"
+    }, {
+      "key" : "pf3",
+      "value" : "query_t~3^5"
+    }, {
+      "key" : "boost",
+      "value" : "map(query({!field f=query_s v=$q}),0,0,1,20)"
+    }, {
+      "key" : "mm",
+      "value" : "50%"
+    }, {
+      "key" : "defType",
+      "value" : "edismax"
+    }, {
+      "key" : "sort",
+      "value" : "score desc, weight_d desc"
+    }, {
+      "key" : "fq",
+      "value" : "weight_d:[* TO *]"
+    } ],
+    "rollupField" : "doc_id_s",
+    "rollupWeightField" : "weight_d",
+    "weightExpression" : "math:log(weight_d + 1) + 10 * math:log(score+1)",
+    "rollupWeightStrategy" : "max",
+    "queryParamToBoost" : "q",
+    "includeEnrichedQuery" : false,
+    "type" : "recommendation",
+    "skip" : true
+  }, {
+    "id" : "ddbc6c21-7b58-4eb1-9c52-d5e5c09cd9b3",
+    "rows" : 10,
+    "start" : 0,
+    "sortOrder" : [ ],
+    "queryFields" : [ ],
+    "returnFields" : [ "*" ],
+    "returnScore" : true,
+    "type" : "search-fields",
+    "skip" : false
+  }, {
+    "id" : "4202a549-1077-4b73-ae84-99f4651b7e3a",
+    "fieldFacets" : [ ],
+    "rangeFacets" : [ ],
+    "type" : "facet",
+    "skip" : false
+  }, {
+    "id" : "57507131-3764-4e84-b530-c63c1a83e4ac",
+    "useOriginalQueryIfNoRulesMatch" : true,
+    "matchPartialFilterQueries" : true,
+    "handler" : "select",
+    "method" : "POST",
+    "ruleLimit" : "100",
+    "params" : [ ],
+    "hierarchicalFilter" : [ ],
+    "headers" : [ ],
+    "maxWaitMs" : 500,
+    "type" : "query-rules",
+    "skip" : true
+  }, {
+    "id" : "4ca6bc30-e812-44cc-b6ca-e80b6b176d57",
+    "httpMethod" : "POST",
+    "allowFederatedSearch" : false,
+    "preferredReplicaType" : "pull",
+    "type" : "solr-query",
+    "skip" : false,
+    "responseSignalsEnabled" : true
+  }, {
+    "id" : "d0ece344-a893-4e5d-b157-afbf8dcc6c82",
+    "facetLabelParseDelimiter" : "||",
+    "type" : "query-rules-augment-response",
+    "skip" : true
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:52.536Z"
+  } ],
+  "properties" : { }
+}

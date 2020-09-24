@@ -1,0 +1,16 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_signals",
+  "createdAt" : "2020-03-05T19:04:26.416Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10,
+  "solrParams" : {
+    "name" : "Yuwen_BB_Grouped_Result_signals",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 4,
+    "configTemplate" : "solr/conf/insights.zip"
+  },
+  "type" : "SIGNALS",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { }
+}

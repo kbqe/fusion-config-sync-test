@@ -1,0 +1,16 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_items_for_user_recommendations",
+  "createdAt" : "2020-04-28T00:02:13.313Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "features" : { },
+  "solrParams" : {
+    "name" : "Yuwen_BB_Grouped_Result_items_for_user_recommendations",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 4
+  },
+  "type" : "RECOMMENDATIONS",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { }
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_bpr_item_recs",
+  "createdAt" : "2020-09-24T09:51:19.483Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "Yuwen_BB_Grouped_Result_bpr_item_recs",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 2
+  },
+  "type" : "RECOMMENDATIONS",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:51:25.271Z"
+  } ]
+}

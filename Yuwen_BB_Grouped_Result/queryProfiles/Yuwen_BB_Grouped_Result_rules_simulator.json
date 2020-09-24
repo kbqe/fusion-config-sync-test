@@ -1,0 +1,27 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_rules_simulator",
+  "queryPipeline" : "grouping-results",
+  "searchHandler" : "/select",
+  "collection" : "Yuwen_BB_Grouped_Result",
+  "params" : [ {
+    "key" : "lw.rules.simulate",
+    "value" : "Yuwen_BB_Grouped_Result_query_rewrite_staging",
+    "policy" : "default"
+  }, {
+    "key" : "lw.rules.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.tagger.debug",
+    "value" : "1",
+    "policy" : "default"
+  }, {
+    "key" : "lw.skip_response_signal",
+    "value" : "1",
+    "policy" : "default"
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:56.540Z"
+  } ]
+}

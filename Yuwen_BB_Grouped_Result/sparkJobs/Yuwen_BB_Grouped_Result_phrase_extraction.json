@@ -1,0 +1,25 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_phrase_extraction",
+  "sourceFields" : "query",
+  "trainingDataSamplingFraction" : 1.0,
+  "minmatch" : 100,
+  "trainingDataFilterQuery" : "*:*",
+  "dataFormat" : "solr",
+  "enableAutoPublish" : false,
+  "type" : "sip",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:58.531Z"
+  } ],
+  "outputCollection" : "Yuwen_BB_Grouped_Result_query_rewrite_staging",
+  "sparkPartitions" : 200,
+  "sparkSQL" : "SELECT * from spark_input",
+  "randomSeed" : 8180,
+  "fieldToVectorize" : "query",
+  "dataOutputFormat" : "solr",
+  "ngramSize" : 3,
+  "trainingCollection" : "Yuwen_BB_Grouped_Result_signals",
+  "attachPhrases" : false,
+  "analyzerConfig" : "{ \"analyzers\": [{ \"name\": \"StdTokLowerStop\",\"charFilters\": [ { \"type\": \"htmlstrip\" } ],\"tokenizer\": { \"type\": \"standard\" },\"filters\": [{ \"type\": \"lowercase\" }] }],\"fields\": [{ \"regex\": \".+\", \"analyzer\": \"StdTokLowerStop\" } ]}",
+  "overwriteOutput" : true
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_bpr_item_recs",
+  "numTestUserClicks" : 1,
+  "trainingDataFilterQuery" : "aggr_id_s:Yuwen_BB_Grouped_Result_user_item_prefs_agg",
+  "performANN" : true,
+  "itemIdField" : "doc_id_s",
+  "type" : "argo-item-recommender-user",
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:51:25.639Z"
+  } ],
+  "useCustomScript" : false,
+  "filterClicked" : true,
+  "outputUserRecsCollection" : "Yuwen_BB_Grouped_Result_bpr_user_recs",
+  "numSimsPerItem" : 10,
+  "numRecsPerUser" : 10,
+  "weightField" : "weight_d",
+  "minNumClickedProducts" : 2,
+  "workflowName" : "argo-item-recommender-user-workflow",
+  "deleteOldRecs" : true,
+  "maxNumTestUsers" : 10000,
+  "learningRate" : 0.05,
+  "factors" : 100,
+  "randomSeed" : 12345,
+  "userIdField" : "user_id_s",
+  "trainingCollection" : "Yuwen_BB_Grouped_Result_recs_aggr",
+  "minNumItemUniqueClicks" : 2,
+  "trainingSampleFraction" : 1.0,
+  "epochs" : 30,
+  "outputItemSimCollection" : "Yuwen_BB_Grouped_Result_bpr_item_recs"
+}

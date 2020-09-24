@@ -1,0 +1,19 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_content_recs",
+  "createdAt" : "2020-09-24T09:51:26.427Z",
+  "searchClusterId" : "default",
+  "commitWithin" : 10000,
+  "solrParams" : {
+    "name" : "Yuwen_BB_Grouped_Result_content_recs",
+    "numShards" : 2,
+    "replicationFactor" : 2,
+    "maxShardsPerNode" : 2
+  },
+  "type" : "RECOMMENDATIONS",
+  "relatedCollectionId" : "Yuwen_BB_Grouped_Result",
+  "metadata" : { },
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:51:32.246Z"
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "id" : "470f4f5a-8ed6-4636-bd42-5bf5a545988e",
+  "app" : "Yuwen_BB_Grouped_Result",
+  "all" : false,
+  "metadata" : {
+    "type" : "landing"
+  },
+  "zoneIds" : [ "4baf26d0-08ea-46ba-bb3e-3973704e18ac", "54c5948f-7e8d-4eb1-af36-e6912f93a43d" ],
+  "name" : "Home",
+  "active" : false,
+  "priority" : 0,
+  "type" : "landing"
+}

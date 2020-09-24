@@ -1,0 +1,19 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result_query_rewrite_staging",
+  "stages" : [ {
+    "id" : "4091f89a-68ed-476f-9406-8f41279a9a10",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : false,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:55.797Z"
+  } ],
+  "properties" : { }
+}

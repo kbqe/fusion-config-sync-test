@@ -1,0 +1,33 @@
+{
+  "id" : "Yuwen_BB_Grouped_Result",
+  "stages" : [ {
+    "id" : "85c1330d-350a-4de1-afda-be4f7bb2e9eb",
+    "mappings" : [ ],
+    "reservedFieldsMappingAllowed" : false,
+    "type" : "field-mapping",
+    "skip" : false
+  }, {
+    "id" : "0be3710c-f8f4-4e35-9c86-602d64f8561a",
+    "duplicateSingleValuedFields" : false,
+    "fieldsToExclude" : [ ],
+    "advancedTextFieldsIndexing" : true,
+    "maxTextLengthForAdvancedIndexing" : 100,
+    "type" : "solr-dynamic-field-name-mapping",
+    "skip" : false
+  }, {
+    "id" : "a3f115da-b912-48f7-ac41-75854e6c01bc",
+    "enforceSchema" : true,
+    "fieldsList" : false,
+    "dateFormats" : [ ],
+    "params" : [ ],
+    "bufferDocsForSolr" : false,
+    "allowBlacklistedRequestParameters" : false,
+    "type" : "solr-index",
+    "skip" : false
+  } ],
+  "updates" : [ {
+    "userId" : "admin",
+    "timestamp" : "2020-09-24T09:50:52.899Z"
+  } ],
+  "properties" : { }
+}
