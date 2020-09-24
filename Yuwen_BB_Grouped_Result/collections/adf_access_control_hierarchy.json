@@ -3,6 +3,7 @@
   "createdAt" : "2020-03-06T18:39:56.725Z",
   "searchClusterId" : "default",
   "commitWithin" : 10000,
+  "features" : { },
   "solrParams" : {
     "name" : "adf_access_control_hierarchy",
     "numShards" : 1,
